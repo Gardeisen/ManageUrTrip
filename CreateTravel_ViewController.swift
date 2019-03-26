@@ -21,9 +21,11 @@ class CreateTravel_ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+           print("//////////////prepare111")
         if segue.identifier == "CreateTravel" {
             let title : String  = self.title_field.text!
             self.newTravel = Travel(t: title)
+            print("//////////////prepare")
         }
         else{
             self.newTravel = nil

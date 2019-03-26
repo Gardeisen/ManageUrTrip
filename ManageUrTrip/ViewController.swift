@@ -51,14 +51,16 @@ class ViewController: UIViewController {
     
     // segue ViewControllerB -> ViewController
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
-        
-        if let newTravelController = sender.source as? CreateTravel_ViewController {
-            //dataRecieved = sourceViewController.dataPassed
+        print("//////////////unwind")
+       // if(sender.identifier == "save"){
+            if let newTravelController = sender.source as? CreateTravel_ViewController {
+                //dataRecieved = sourceViewController.dataPassed
             
-            if let travel = newTravelController.newTravel{
-                self.TravelTableViewController.travelSet_ViewModel.add(trav: travel)
-                CoreDataManager.save()
+                if let travel = newTravelController.newTravel{
+                    self.TravelTableViewController.travelSet_ViewModel.add(trav: travel)
+                    CoreDataManager.save()
             } }
+        //}
     }
 }
 
