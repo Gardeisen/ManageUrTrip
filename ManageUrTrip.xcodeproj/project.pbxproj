@@ -13,6 +13,8 @@
 		4A2854BC224A633E007EB180 /* Travel_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854BB224A633E007EB180 /* Travel_TableViewController.swift */; };
 		4A2854BE224A65AE007EB180 /* TravelSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854BD224A65AE007EB180 /* TravelSet.swift */; };
 		4A2854C0224A6F79007EB180 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854BF224A6F79007EB180 /* CoreDataManager.swift */; };
+		4A84D7F0224A97A7001D644A /* ShowTravel_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A84D7EF224A97A7001D644A /* ShowTravel_ViewController.swift */; };
+		4A84D7F2224A97C6001D644A /* CreateTravel_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A84D7F1224A97C6001D644A /* CreateTravel_ViewController.swift */; };
 		827E3356224A282600DCA34F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E3355224A282600DCA34F /* AppDelegate.swift */; };
 		827E3358224A282600DCA34F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E3357224A282600DCA34F /* ViewController.swift */; };
 		827E335B224A282600DCA34F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827E3359224A282600DCA34F /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		4A2854BB224A633E007EB180 /* Travel_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel_TableViewController.swift; sourceTree = "<group>"; };
 		4A2854BD224A65AE007EB180 /* TravelSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelSet.swift; sourceTree = "<group>"; };
 		4A2854BF224A6F79007EB180 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		4A84D7EF224A97A7001D644A /* ShowTravel_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTravel_ViewController.swift; sourceTree = "<group>"; };
+		4A84D7F1224A97C6001D644A /* CreateTravel_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTravel_ViewController.swift; sourceTree = "<group>"; };
 		827E3352224A282600DCA34F /* ManageUrTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageUrTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		827E3355224A282600DCA34F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		827E3357224A282600DCA34F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ManageUrTrip/ViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 			children = (
 				827E3357224A282600DCA34F /* ViewController.swift */,
 				4A2854BB224A633E007EB180 /* Travel_TableViewController.swift */,
+				4A84D7EF224A97A7001D644A /* ShowTravel_ViewController.swift */,
+				4A84D7F1224A97C6001D644A /* CreateTravel_ViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -321,9 +327,11 @@
 				827E3358224A282600DCA34F /* ViewController.swift in Sources */,
 				4A2854B6224A62B0007EB180 /* Travel.swift in Sources */,
 				4A2854BE224A65AE007EB180 /* TravelSet.swift in Sources */,
+				4A84D7F0224A97A7001D644A /* ShowTravel_ViewController.swift in Sources */,
 				827E335E224A282600DCA34F /* ManageUrTrip.xcdatamodeld in Sources */,
 				4A2854C0224A6F79007EB180 /* CoreDataManager.swift in Sources */,
 				4A2854BC224A633E007EB180 /* Travel_TableViewController.swift in Sources */,
+				4A84D7F2224A97C6001D644A /* CreateTravel_ViewController.swift in Sources */,
 				827E3356224A282600DCA34F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
