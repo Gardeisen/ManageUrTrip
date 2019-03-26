@@ -1,4 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Debt" representedClassName="Debt" syncable="YES" codeGenerationType="class">
+        <attribute name="pPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="debtOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Friend" inverseName="payesFor" inverseEntity="Friend" syncable="YES"/>
+        <relationship name="debtTransaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="isPayedFor" inverseEntity="Transaction" syncable="YES"/>
+    </entity>
+    <entity name="Friend" representedClassName="Friend" syncable="YES" codeGenerationType="class">
+        <attribute name="pArrival" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pDeparture" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pFirstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pLastname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pTotal_I_payed" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="hasAdebt" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PersonalBalance" inverseName="isLinkedTo" inverseEntity="PersonalBalance" syncable="YES"/>
+        <relationship name="participates" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Travel" inverseName="isComposedBy" inverseEntity="Travel" syncable="YES"/>
+        <relationship name="payes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="isPayedBy" inverseEntity="Transaction" syncable="YES"/>
+        <relationship name="payesFor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Debt" inverseName="debtOf" inverseEntity="Debt" syncable="YES"/>
+    </entity>
+    <entity name="PersonalBalance" representedClassName="PersonalBalance" syncable="YES" codeGenerationType="class">
+        <attribute name="pFullname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pValue" optional="YES" syncable="YES"/>
+        <relationship name="isLinkedTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Friend" inverseName="hasAdebt" inverseEntity="Friend" syncable="YES"/>
+    </entity>
+    <entity name="Transaction" representedClassName="Transaction" syncable="YES" codeGenerationType="class">
+        <attribute name="isSpent" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="isPayedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Friend" inverseName="payes" inverseEntity="Friend" syncable="YES"/>
+        <relationship name="isPayedFor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Debt" inverseName="debtTransaction" inverseEntity="Debt" syncable="YES"/>
+    </entity>
+    <entity name="Travel" representedClassName="Travel" syncable="YES" codeGenerationType="class">
+        <attribute name="pBeginning" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pEnd" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pPicture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="isComposedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Friend" inverseName="participates" inverseEntity="Friend" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Friend" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="Travel" positionX="124" positionY="-126" width="128" height="118"/>
+        <element name="Transaction" positionX="322" positionY="12" width="128" height="148"/>
+        <element name="PersonalBalance" positionX="-18" positionY="351" width="128" height="88"/>
+        <element name="Debt" positionX="162" positionY="216" width="128" height="90"/>
+    </elements>
 </model>
