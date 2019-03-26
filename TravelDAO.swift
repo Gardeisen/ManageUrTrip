@@ -21,7 +21,16 @@ class TravelDAO{
     static func fetchAll() -> [Travel]?{
         self.request.predicate = nil
         do{
-            return try CoreDataManager.context.fetch(self.request)
+            //return try CoreDataManager.context.fetch(self.request)
+            let t1 : Travel  = Travel(t : "turquie")
+            let t2 : Travel  = Travel(t : "alaska")
+            
+            var tt : [Travel] = []
+            tt.append(t1)
+            tt.append(t2)
+            
+            return tt
+            
         }
         catch{
             return nil

@@ -10,6 +10,7 @@ import UIKit
 
 class Travel_TableViewController: NSObject, UITableViewDataSource, TravelSetViewModelDelegate  {
 
+    @IBOutlet weak var tableView: UITableView!
     var travelSet_ViewModel : TravelSetViewModel
     
     override init() {
@@ -47,17 +48,17 @@ class Travel_TableViewController: NSObject, UITableViewDataSource, TravelSetView
         
     }
     
-    func personDeleted(at indexPath: IndexPath) {
+    func travelDeleted(at indexPath: IndexPath) {
         
     }
     
-    func personUpdated(at indexPath: IndexPath) {
+    func travelUpdated(at indexPath: IndexPath) {
         
     }
     
-    func personAdded(at indexPath: IndexPath) {
+    func travelAdded(at indexPath: IndexPath) {
         self.tableView.beginUpdates()
-        self.tableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.middle)
+        self.tableView.insertRows(at: [indexPath], with: UITableViewRowAnimation.middle)
         self.tableView.endUpdates()
     }
 

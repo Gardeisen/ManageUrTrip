@@ -21,5 +21,10 @@ extension Travel{
         get{ return (self.pBeginning as Date?) }
     }
     
+    convenience init(t : String){
+        self.init(context: CoreDataManager.context)
+        self.pTitle = t
+    }
+    
     //image of travel has to be handle
 }
