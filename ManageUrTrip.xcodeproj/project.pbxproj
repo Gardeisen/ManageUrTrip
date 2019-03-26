@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A2854B6224A62B0007EB180 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854B5224A62B0007EB180 /* Travel.swift */; };
+		4A2854B8224A62E2007EB180 /* TravelDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854B7224A62E2007EB180 /* TravelDAO.swift */; };
+		4A2854BA224A630B007EB180 /* TravelSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854B9224A630B007EB180 /* TravelSetViewModel.swift */; };
+		4A2854BC224A633E007EB180 /* Travel_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854BB224A633E007EB180 /* Travel_TableViewController.swift */; };
+		4A2854BE224A65AE007EB180 /* TravelSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854BD224A65AE007EB180 /* TravelSet.swift */; };
+		4A2854C0224A6F79007EB180 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854BF224A6F79007EB180 /* CoreDataManager.swift */; };
 		827E3356224A282600DCA34F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E3355224A282600DCA34F /* AppDelegate.swift */; };
 		827E3358224A282600DCA34F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E3357224A282600DCA34F /* ViewController.swift */; };
 		827E335B224A282600DCA34F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827E3359224A282600DCA34F /* Main.storyboard */; };
@@ -35,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A2854B5224A62B0007EB180 /* Travel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
+		4A2854B7224A62E2007EB180 /* TravelDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDAO.swift; sourceTree = "<group>"; };
+		4A2854B9224A630B007EB180 /* TravelSetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelSetViewModel.swift; sourceTree = "<group>"; };
+		4A2854BB224A633E007EB180 /* Travel_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel_TableViewController.swift; sourceTree = "<group>"; };
+		4A2854BD224A65AE007EB180 /* TravelSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelSet.swift; sourceTree = "<group>"; };
+		4A2854BF224A6F79007EB180 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		827E3352224A282600DCA34F /* ManageUrTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageUrTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		827E3355224A282600DCA34F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		827E3357224A282600DCA34F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ManageUrTrip/ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +121,7 @@
 				827E3361224A282600DCA34F /* LaunchScreen.storyboard */,
 				827E3364224A282600DCA34F /* Info.plist */,
 				827E335C224A282600DCA34F /* ManageUrTrip.xcdatamodeld */,
+				4A2854BF224A6F79007EB180 /* CoreDataManager.swift */,
 			);
 			path = ManageUrTrip;
 			sourceTree = "<group>";
@@ -134,6 +147,7 @@
 		827E3386224A285800DCA34F /* DAO */ = {
 			isa = PBXGroup;
 			children = (
+				4A2854B7224A62E2007EB180 /* TravelDAO.swift */,
 			);
 			name = DAO;
 			path = ..;
@@ -142,6 +156,7 @@
 		827E3387224A286400DCA34F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4A2854B9224A630B007EB180 /* TravelSetViewModel.swift */,
 			);
 			name = ViewModel;
 			path = ..;
@@ -150,6 +165,8 @@
 		827E3388224A287100DCA34F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A2854B5224A62B0007EB180 /* Travel.swift */,
+				4A2854BD224A65AE007EB180 /* TravelSet.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -159,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				827E3357224A282600DCA34F /* ViewController.swift */,
+				4A2854BB224A633E007EB180 /* Travel_TableViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -298,8 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A2854B8224A62E2007EB180 /* TravelDAO.swift in Sources */,
+				4A2854BA224A630B007EB180 /* TravelSetViewModel.swift in Sources */,
 				827E3358224A282600DCA34F /* ViewController.swift in Sources */,
+				4A2854B6224A62B0007EB180 /* Travel.swift in Sources */,
+				4A2854BE224A65AE007EB180 /* TravelSet.swift in Sources */,
 				827E335E224A282600DCA34F /* ManageUrTrip.xcdatamodeld in Sources */,
+				4A2854C0224A6F79007EB180 /* CoreDataManager.swift in Sources */,
+				4A2854BC224A633E007EB180 /* Travel_TableViewController.swift in Sources */,
 				827E3356224A282600DCA34F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,6 +571,7 @@
 				827E337F224A282600DCA34F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		827E3380224A282600DCA34F /* Build configuration list for PBXNativeTarget "ManageUrTripTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +580,7 @@
 				827E3382224A282600DCA34F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		827E3383224A282600DCA34F /* Build configuration list for PBXNativeTarget "ManageUrTripUITests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +589,7 @@
 				827E3385224A282600DCA34F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
