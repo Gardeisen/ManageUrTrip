@@ -166,7 +166,7 @@
         <!--Spending-->
         <scene sceneID="aoM-mn-HOA">
             <objects>
-                <viewController id="kcL-Gs-oFb" sceneMemberID="viewController">
+                <viewController id="kcL-Gs-oFb" customClass="SpendingViewController" customModule="ManageUrTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="czZ-h4-UV1"/>
                         <viewControllerLayoutGuide type="bottom" id="BhY-od-mKG"/>
@@ -188,6 +188,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nEz-KJ-zXc" id="FNJ-9X-n73"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,8 +208,16 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="TransactionTableViewController" destination="nEz-KJ-zXc" id="z0A-mE-ctn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nr3-Eh-R6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="nEz-KJ-zXc" customClass="Transaction_TableViewController" customModule="ManageUrTrip" customModuleProvider="target">
+                    <connections>
+                        <outlet property="tableView" destination="4It-oR-S8R" id="v0y-N5-Qd4"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1584.8" y="-367.46626686656674"/>
         </scene>
