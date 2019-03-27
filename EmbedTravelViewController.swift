@@ -39,4 +39,27 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
             } }
         return false
     }
+    
+    @IBAction func addParticipant(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "New Participant", message: "Add a name", preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Add", style: .default) {
+            [unowned self] action in
+            guard let textField = alert.textFields?.first,
+                let nameToSave = textField.text else {
+                    return
+            }
+        
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+        
+        alert.addTextField()
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        
+    }
+    
 }
