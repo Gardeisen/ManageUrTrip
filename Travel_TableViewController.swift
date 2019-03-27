@@ -59,10 +59,17 @@ class Travel_TableViewController: NSObject, UITableViewDataSource, TravelSetView
     }
     
     func travelAdded(at indexPath: IndexPath) {
-        print("//////////////travelAdded")
+        
         self.tableView.beginUpdates()
         self.tableView.insertRows(at: [indexPath], with: UITableViewRowAnimation.middle)
         self.tableView.endUpdates()
     }
 
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   canEditRowAt indexPath: IndexPath) -> Bool{
+       return true
+    }
 }
