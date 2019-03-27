@@ -41,6 +41,8 @@ class Travel_TableViewController: NSObject, UITableViewDataSource, TravelSetView
             fatalError("no travel found at this index")
         }
         cell.textLabel?.text = " \(travel.title) "
+        cell.detailTextLabel?.text = " voici un sous titre"
+        cell.imageView?.image = UIImage(named: "beach")
         return cell
     }
     
