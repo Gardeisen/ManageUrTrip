@@ -30,6 +30,10 @@
 		827E3363224A282600DCA34F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827E3361224A282600DCA34F /* LaunchScreen.storyboard */; };
 		827E336E224A282600DCA34F /* ManageUrTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E336D224A282600DCA34F /* ManageUrTripTests.swift */; };
 		827E3379224A282600DCA34F /* ManageUrTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E3378224A282600DCA34F /* ManageUrTripUITests.swift */; };
+		82D26FCB224BEEA800019B14 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D26FCA224BEEA800019B14 /* Friend.swift */; };
+		82D26FCD224BEEDC00019B14 /* FriendSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D26FCC224BEEDC00019B14 /* FriendSet.swift */; };
+		82D26FD1224BEF5C00019B14 /* FriendSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D26FD0224BEF5C00019B14 /* FriendSetViewModel.swift */; };
+		82D26FD3224BF0CB00019B14 /* FriendDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D26FD2224BF0CB00019B14 /* FriendDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		827E3374224A282600DCA34F /* ManageUrTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManageUrTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		827E3378224A282600DCA34F /* ManageUrTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageUrTripUITests.swift; sourceTree = "<group>"; };
 		827E337A224A282600DCA34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82D26FCA224BEEA800019B14 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		82D26FCC224BEEDC00019B14 /* FriendSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSet.swift; sourceTree = "<group>"; };
+		82D26FD0224BEF5C00019B14 /* FriendSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSetViewModel.swift; sourceTree = "<group>"; };
+		82D26FD2224BF0CB00019B14 /* FriendDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,7 @@
 			children = (
 				4A2854B7224A62E2007EB180 /* TravelDAO.swift */,
 				3B3A38AB224B7BA700D4C5D5 /* TransactionDAO.swift */,
+				82D26FD2224BF0CB00019B14 /* FriendDAO.swift */,
 			);
 			name = DAO;
 			path = ..;
@@ -177,6 +186,7 @@
 			children = (
 				4A2854B9224A630B007EB180 /* TravelSetViewModel.swift */,
 				3B3A38AD224B7BD200D4C5D5 /* TransactionSetViewModel.swift */,
+				82D26FD0224BEF5C00019B14 /* FriendSetViewModel.swift */,
 			);
 			name = ViewModel;
 			path = ..;
@@ -189,6 +199,8 @@
 				4A2854BD224A65AE007EB180 /* TravelSet.swift */,
 				3B3A38AF224B7BEB00D4C5D5 /* Transaction.swift */,
 				3B3A38B1224B7C0B00D4C5D5 /* TransactionSet.swift */,
+				82D26FCA224BEEA800019B14 /* Friend.swift */,
+				82D26FCC224BEEDC00019B14 /* FriendSet.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -345,6 +357,7 @@
 			files = (
 				4A2854B8224A62E2007EB180 /* TravelDAO.swift in Sources */,
 				3B3A38B2224B7C0B00D4C5D5 /* TransactionSet.swift in Sources */,
+				82D26FCD224BEEDC00019B14 /* FriendSet.swift in Sources */,
 				4A2854BA224A630B007EB180 /* TravelSetViewModel.swift in Sources */,
 				827E3358224A282600DCA34F /* ViewController.swift in Sources */,
 				3B3A38AC224B7BA700D4C5D5 /* TransactionDAO.swift in Sources */,
@@ -355,7 +368,10 @@
 				4A2854BE224A65AE007EB180 /* TravelSet.swift in Sources */,
 				4A84D7F0224A97A7001D644A /* ShowTravel_ViewController.swift in Sources */,
 				827E335E224A282600DCA34F /* ManageUrTrip.xcdatamodeld in Sources */,
+				82D26FD1224BEF5C00019B14 /* FriendSetViewModel.swift in Sources */,
+				82D26FD3224BF0CB00019B14 /* FriendDAO.swift in Sources */,
 				4A2854C0224A6F79007EB180 /* CoreDataManager.swift in Sources */,
+				82D26FCB224BEEA800019B14 /* Friend.swift in Sources */,
 				4A2854BC224A633E007EB180 /* Travel_TableViewController.swift in Sources */,
 				4A84D7F2224A97C6001D644A /* CreateTravel_ViewController.swift in Sources */,
 				827E3356224A282600DCA34F /* AppDelegate.swift in Sources */,
