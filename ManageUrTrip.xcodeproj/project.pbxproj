@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BEE7577224B6ECB00D2ED38 /* EmbedTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE7576224B6ECB00D2ED38 /* EmbedTravelViewController.swift */; };
 		4A2854B6224A62B0007EB180 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854B5224A62B0007EB180 /* Travel.swift */; };
 		4A2854B8224A62E2007EB180 /* TravelDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854B7224A62E2007EB180 /* TravelDAO.swift */; };
 		4A2854BA224A630B007EB180 /* TravelSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854B9224A630B007EB180 /* TravelSetViewModel.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BEE7576224B6ECB00D2ED38 /* EmbedTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedTravelViewController.swift; sourceTree = "<group>"; };
 		4A2854B5224A62B0007EB180 /* Travel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		4A2854B7224A62E2007EB180 /* TravelDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDAO.swift; sourceTree = "<group>"; };
 		4A2854B9224A630B007EB180 /* TravelSetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelSetViewModel.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				4A2854BB224A633E007EB180 /* Travel_TableViewController.swift */,
 				4A84D7EF224A97A7001D644A /* ShowTravel_ViewController.swift */,
 				4A84D7F1224A97C6001D644A /* CreateTravel_ViewController.swift */,
+				3BEE7576224B6ECB00D2ED38 /* EmbedTravelViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -326,6 +329,7 @@
 				4A2854BA224A630B007EB180 /* TravelSetViewModel.swift in Sources */,
 				827E3358224A282600DCA34F /* ViewController.swift in Sources */,
 				4A2854B6224A62B0007EB180 /* Travel.swift in Sources */,
+				3BEE7577224B6ECB00D2ED38 /* EmbedTravelViewController.swift in Sources */,
 				4A2854BE224A65AE007EB180 /* TravelSet.swift in Sources */,
 				4A84D7F0224A97A7001D644A /* ShowTravel_ViewController.swift in Sources */,
 				827E335E224A282600DCA34F /* ManageUrTrip.xcdatamodeld in Sources */,
