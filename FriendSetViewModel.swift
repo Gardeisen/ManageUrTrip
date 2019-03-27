@@ -61,7 +61,7 @@ class FriendSetViewModel {
     // MARK: View Model functions
     /// add a new friend in set of friend
     ///
-    /// - Parameter travel: Travel to be added
+    /// - Parameter friend: Friend to be added
     public func add(friend: Friend){
         if self.modelset.indexOf(f: friend) == -1{
             self.modelset.add(friend: friend)

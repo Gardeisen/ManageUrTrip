@@ -81,7 +81,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="o2i-1D-Iqv" kind="show" id="t5P-OE-Wgo"/>
+                                    <segue destination="o2i-1D-Iqv" kind="show" identifier="ParticipantsShow" id="t5P-OE-Wgo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxO-t9-FMr">

@@ -63,6 +63,10 @@ class TableParticipatingController: NSObject , UITableViewDataSource, FriendSetV
     
     func friendAdded(at indexPath: IndexPath) {
         
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [indexPath], with: UITableViewRowAnimation.middle)
+        self.tableView.endUpdates()
     }
+
     
 }

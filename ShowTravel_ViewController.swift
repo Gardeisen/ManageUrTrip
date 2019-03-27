@@ -25,15 +25,26 @@ class ShowTravel_ViewController: UIViewController {
             self.name.textColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
             self.image.image = UIImage(named: "beach")
             
-            
-            
-            
-            
         } else {
             self.name.text = ""
             
         }
-
-
-}
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "ParticipantsShow") {
+            
+            if let destination = segue.destination as? ParticipatingFriendviewController {
+                
+                guard let travel = self.travelSelected else {
+                    fatalError("no travel found")
+                }
+                destination.travelSelected = travel
+            }
+            
+        }
+        
+    }
 }

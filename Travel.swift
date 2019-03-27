@@ -26,5 +26,7 @@ extension Travel{
         self.pTitle = t
     }
     
+    
+    
     //image of travel has to be handle
 }

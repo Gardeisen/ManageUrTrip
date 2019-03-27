@@ -11,7 +11,7 @@ import UIKit
 class ParticipatingFriendviewController: UIViewController {
 
     
-    
+    var travelSelected : Travel?
     @IBOutlet var ParticipantsViewController: TableParticipatingController!
     
     override func viewDidLoad() {
