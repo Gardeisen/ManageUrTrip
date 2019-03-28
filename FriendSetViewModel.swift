@@ -52,6 +52,19 @@ class FriendSetViewModel {
             self.modelset = FriendSet()
         }
     }
+    
+    /*init(travel : Travel) {
+        if let data = travel.isComposedBy {
+            for p in data{
+                self.dataset.append(p)
+            }
+        self.modelset = FriendSet(friend: self.dataset)
+        }
+        else{
+            self.modelset = FriendSet()
+        }
+    }*/
+    
     convenience init(delegate : FriendSetViewModelDelegate) {
         self.init()
         self.delegate = delegate

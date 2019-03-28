@@ -38,10 +38,12 @@ class ShowTravel_ViewController: UIViewController {
             
             if let destination = segue.destination as? ParticipatingFriendviewController {
                 
-                guard let travel = self.travelSelected else {
-                    fatalError("no travel found")
+                destination.travelSelected = self.travelSelected
+                
+                /*guard let friends = self.ParticipantsViewController.friendSet_ViewModel else{
+                    fatalError("no travel found at this index")
                 }
-                destination.travelSelected = travel
+                destination.travelSelected = friends*/
             }
             
         }

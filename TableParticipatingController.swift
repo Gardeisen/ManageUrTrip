@@ -42,7 +42,7 @@ class TableParticipatingController: NSObject , UITableViewDataSource, FriendSetV
         guard let friend = self.friendSet_ViewModel.get(friendAt: indexPath.row) else{
             fatalError("no travel found at this index")
         }
-        cell.textLabel?.text = " \(friend.lastname) "
+        cell.textLabel?.text = " \(friend.firstname) "
         //cell.detailTextLabel?.text = " voici un sous titre"
         //cell.imageView?.image = UIImage(named: "beach")
         return cell

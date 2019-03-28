@@ -26,7 +26,11 @@ extension Travel{
         self.pTitle = t
     }
     
-    
+    convenience init(t: String, isParticing : [Friend]){
+        self.init(context: CoreDataManager.context)
+        self.pTitle = t
+        self.isComposedBy = NSSet(array: isParticing)
+    }
     
     //image of travel has to be handle
 }
