@@ -1,34 +1,33 @@
 //
-//  EmbedTravelViewController.swift
+//  addParticipantViewController.swift
 //  ManageUrTrip
 //
-//  Created by Marine  on 27/03/2019.
+//  Created by etud 2 ig on 28/03/2019.
 //  Copyright © 2019 Marine GARDEISEN. All rights reserved.
 //
 
 import UIKit
 
-class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
+class addParticipantViewController: UIViewController, UITextFieldDelegate {
+
     
-    @IBOutlet weak var title_field: UITextField!
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var startDate: UIDatePicker!
-    @IBOutlet weak var endDate: UIDatePicker!
+    @IBOutlet weak var firstnameTextField: UITextField!
     
-    var newTravel : Travel?
+    @IBOutlet weak var lastnameTextField: UITextField!
     
-    // preparation before navigation
+    var newFriend : Friend?
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "save" { //UNWIND LINK
-            let title : String  = self.title_field.text!
-            self.newTravel = Travel(t: title)
+            let firstname : String  = self.firstnameTextField.text!
+            let lastname : String = self.lastnameTextField.text!
+            self.newFriend = Friend(firstname: firstname, lastname: lastname)
         }
         else{
-            self.newTravel = nil
+            self.newFriend = nil
         } }
-    
     
     // MARK: - TextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -39,5 +38,4 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
             } }
         return false
     }
-    
 }
