@@ -37,6 +37,7 @@
 		82D26FD5224BF37200019B14 /* ParticipatingFriendviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D26FD4224BF37200019B14 /* ParticipatingFriendviewController.swift */; };
 		82D26FD7224BF41600019B14 /* TableParticipatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D26FD6224BF41600019B14 /* TableParticipatingController.swift */; };
 		E74A72B8224CF8E30076C58C /* addParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74A72B7224CF8E30076C58C /* addParticipantViewController.swift */; };
+		E74A72BA224D0DCF0076C58C /* TableParticipantEmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		82D26FD4224BF37200019B14 /* ParticipatingFriendviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipatingFriendviewController.swift; sourceTree = "<group>"; };
 		82D26FD6224BF41600019B14 /* TableParticipatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableParticipatingController.swift; sourceTree = "<group>"; };
 		E74A72B7224CF8E30076C58C /* addParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addParticipantViewController.swift; sourceTree = "<group>"; };
+		E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableParticipantEmbedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 				82D26FD4224BF37200019B14 /* ParticipatingFriendviewController.swift */,
 				82D26FD6224BF41600019B14 /* TableParticipatingController.swift */,
 				E74A72B7224CF8E30076C58C /* addParticipantViewController.swift */,
+				E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -385,6 +388,7 @@
 				4A2854C0224A6F79007EB180 /* CoreDataManager.swift in Sources */,
 				82D26FCB224BEEA800019B14 /* Friend.swift in Sources */,
 				4A2854BC224A633E007EB180 /* Travel_TableViewController.swift in Sources */,
+				E74A72BA224D0DCF0076C58C /* TableParticipantEmbedViewController.swift in Sources */,
 				4A84D7F2224A97C6001D644A /* CreateTravel_ViewController.swift in Sources */,
 				827E3356224A282600DCA34F /* AppDelegate.swift in Sources */,
 				3B3A38B6224B819500D4C5D5 /* SpendingViewController.swift in Sources */,

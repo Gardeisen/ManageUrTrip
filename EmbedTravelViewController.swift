@@ -15,6 +15,8 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var startDate: UIDatePicker!
     @IBOutlet weak var endDate: UIDatePicker!
     
+    @IBOutlet var tableParticipantEmbedTravel: TableParticipantEmbedViewController!
+    
     var newTravel : Travel?
     
     // preparation before navigation
@@ -39,5 +41,29 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
             } }
         return false
     }
+    
+    
+    @IBAction func addParticipantsFriend(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "Add ", message: "bb", preferredStyle: .alert)
+        self.present(alertController, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    @IBAction func unwindToAddTravel(sender: UIStoryboardSegue) {
+        if(sender.identifier == "save"){ //Unwind LINK
+            // let newTravelController = sender.source as! CreateTravel_ViewController
+            //let embedTravelController = newTravelController.childViewControllers[0] as! EmbedTravelViewController
+            let addParticipantsController = sender.source as! addParticipantViewController
+            if let friend = addParticipantsController.newFriend{
+                //self.TravelTableViewController.travelSet_ViewModel.add(trav: travel)
+                CoreDataManager.save()
+            }
+        }
+    }
+    
+    
     
 }

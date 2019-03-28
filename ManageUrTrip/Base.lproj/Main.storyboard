@@ -885,13 +885,33 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AHk-x0-z39">
                                 <rect key="frame" x="0.0" y="275" width="375" height="223"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="GvE-i5-pyC">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GvE-i5-pyC" id="zE9-Fb-skG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pwr-NU-Cmc" id="fbb-gu-SLE"/>
+                                </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faA-0d-YUv">
+                                <rect key="frame" x="271" y="245" width="22" height="22"/>
+                                <connections>
+                                    <action selector="addParticipantsFriend:" destination="Ze3-1A-MA0" eventType="touchUpInside" id="53Z-E4-n2g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ae7-pe-2bk" firstAttribute="leading" secondItem="s7W-gb-tne" secondAttribute="leading" constant="15" id="0u7-Af-c45"/>
                             <constraint firstItem="Zhj-sv-EnQ" firstAttribute="top" secondItem="s7W-gb-tne" secondAttribute="top" constant="7" id="44R-NH-0NI"/>
                             <constraint firstItem="88S-ls-Wcu" firstAttribute="leading" secondItem="s7W-gb-tne" secondAttribute="leading" constant="15" id="4oa-R3-kQp"/>
+                            <constraint firstItem="faA-0d-YUv" firstAttribute="leading" secondItem="nTJ-vm-kq4" secondAttribute="trailing" constant="16" id="5Cu-Ww-ATg"/>
                             <constraint firstItem="qDR-uq-I8N" firstAttribute="leading" secondItem="QlC-NM-XRF" secondAttribute="trailing" constant="17" id="76D-BS-HxE"/>
                             <constraint firstItem="gta-V6-7Tm" firstAttribute="top" secondItem="7bN-vN-JlJ" secondAttribute="bottom" constant="15" id="9l6-H4-7kS"/>
                             <constraint firstItem="jcB-N3-0i6" firstAttribute="leading" secondItem="s7W-gb-tne" secondAttribute="leading" constant="15" id="DDg-dA-O1H"/>
@@ -900,14 +920,17 @@
                             <constraint firstItem="HgB-VP-UQQ" firstAttribute="leading" secondItem="s7W-gb-tne" secondAttribute="leading" constant="15" id="GpL-dZ-Mb7"/>
                             <constraint firstItem="NBU-XS-v9w" firstAttribute="top" secondItem="VGr-gv-A7Z" secondAttribute="bottom" constant="5" id="HlA-Aq-BNE"/>
                             <constraint firstItem="nTJ-vm-kq4" firstAttribute="top" secondItem="NBU-XS-v9w" secondAttribute="bottom" constant="22" id="IdK-py-ks4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="faA-0d-YUv" secondAttribute="trailing" constant="66" id="Ie2-28-WtI"/>
                             <constraint firstItem="QlC-NM-XRF" firstAttribute="top" secondItem="Zhj-sv-EnQ" secondAttribute="bottom" constant="17" id="KQg-9G-p8E"/>
                             <constraint firstItem="jcB-N3-0i6" firstAttribute="top" secondItem="HgB-VP-UQQ" secondAttribute="bottom" constant="25" id="Khe-TC-i6J"/>
                             <constraint firstItem="AHk-x0-z39" firstAttribute="top" secondItem="ae7-pe-2bk" secondAttribute="bottom" constant="8" id="SNN-yA-F4g"/>
                             <constraint firstItem="88S-ls-Wcu" firstAttribute="top" secondItem="s7W-gb-tne" secondAttribute="top" constant="10" id="Sax-jo-uzJ"/>
+                            <constraint firstItem="AHk-x0-z39" firstAttribute="top" secondItem="faA-0d-YUv" secondAttribute="bottom" constant="8" id="YZK-hf-Rod"/>
                             <constraint firstItem="gta-V6-7Tm" firstAttribute="top" secondItem="LYB-ly-OOd" secondAttribute="bottom" constant="15" id="cXY-e8-goH"/>
                             <constraint firstItem="ae7-pe-2bk" firstAttribute="top" secondItem="NBU-XS-v9w" secondAttribute="bottom" constant="18" id="faG-Of-eg8"/>
                             <constraint firstItem="LYB-ly-OOd" firstAttribute="leading" secondItem="s7W-gb-tne" secondAttribute="leadingMargin" constant="15" id="feS-AL-Lsp"/>
                             <constraint firstAttribute="trailing" secondItem="AHk-x0-z39" secondAttribute="trailing" id="hGL-ea-nt4"/>
+                            <constraint firstItem="faA-0d-YUv" firstAttribute="top" secondItem="NBU-XS-v9w" secondAttribute="bottom" constant="22" id="lsx-co-WHf"/>
                             <constraint firstAttribute="bottom" secondItem="AHk-x0-z39" secondAttribute="bottom" constant="115" id="m1U-fe-rbY"/>
                             <constraint firstItem="NBU-XS-v9w" firstAttribute="leading" secondItem="jcB-N3-0i6" secondAttribute="trailing" constant="17.5" id="m8T-W3-9H4"/>
                             <constraint firstItem="qDR-uq-I8N" firstAttribute="top" secondItem="Zhj-sv-EnQ" secondAttribute="bottom" constant="8" id="mw6-3a-GKv"/>
@@ -923,10 +946,16 @@
                         <outlet property="endDate" destination="NBU-XS-v9w" id="dIl-uP-CdA"/>
                         <outlet property="image" destination="qDR-uq-I8N" id="y0P-qc-4vO"/>
                         <outlet property="startDate" destination="VGr-gv-A7Z" id="jkn-4E-Js7"/>
+                        <outlet property="tableParticipantEmbedTravel" destination="Pwr-NU-Cmc" id="6vG-pe-FjB"/>
                         <outlet property="title_field" destination="Zhj-sv-EnQ" id="eQh-gn-2Ho"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncf-lx-xLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Pwr-NU-Cmc" customClass="TableParticipantEmbedViewController" customModule="ManageUrTrip" customModuleProvider="target">
+                    <connections>
+                        <outlet property="tableView" destination="AHk-x0-z39" id="3Q7-KG-HfA"/>
+                    </connections>
+                </customObject>
                 <exit id="Na8-vp-PzB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="360.80000000000001" y="1922.7886056971515"/>
