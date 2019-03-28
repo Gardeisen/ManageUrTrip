@@ -70,7 +70,9 @@ class FriendSet: Sequence {
     }
     
     public func add(friend : Friend) {
-        
+        if(!contains(_title : friend.firstname)){
+            self.set.append(friend);
+        }
     }
     
 }

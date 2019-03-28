@@ -72,6 +72,13 @@ class FriendSetViewModel {
             print(self.modelset.count() - 1)
         }}
     
+    public func delete(friendAt index: Int){
+        FriendDAO.delete(friend : self.dataset[index])
+        self.modelset.remove(friend: self.dataset[index])
+        self.dataset.remove(at: index)
+        self.delegate?.friendDeleted(at: IndexPath(row: index,section:0))
+    }
+    
     /// numbers of travels
     ///
     /// - Returns: number of travels

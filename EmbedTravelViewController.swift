@@ -16,7 +16,6 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var endDate: UIDatePicker!
     
     @IBOutlet var tableParticipantEmbedTravel: TableParticipantEmbedViewController!
-    
     var newTravel : Travel?
     
     // preparation before navigation
@@ -45,8 +44,25 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func addParticipantsFriend(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Add ", message: "bb", preferredStyle: .alert)
-        self.present(alertController, animated: true, completion: nil)
+        let alert = UIAlertController(title: "Add Friend to this Trip ", message: "insert Participant", preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "SAVE", style: .default) {
+            [unowned self] action in
+            guard let textField1 = alert.textFields?.first , let firstname = textField1.text else {
+                return
+            }
+            let friend = Friend(firstname: firstname, lastname: "")
+            self.tableParticipantEmbedTravel.friendSetViewModel.add(friend: friend)
+            self.tableParticipantEmbedTravel.tableView.reloadData()
+            
+            
+        }
+        let cancelAction = UIAlertAction(title: "CANCEL", style: .default)
+        
+        alert.addTextField()
+        alert.addAction(cancelAction)
+        alert.addAction(saveAction)
+        
+        self.present(alert, animated: true, completion: nil)
         
         
     }
