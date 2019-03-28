@@ -69,6 +69,9 @@ class Travel_TableViewController: NSObject, UITableViewDataSource, TravelSetView
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
         
+        
+        //let alertHelper = AlertHelper()
+        //alertHelper.alert(title: "", message: "")
         if(editingStyle == UITableViewCell.EditingStyle.delete){
             self.travelSet_ViewModel.delete(travelAt: indexPath.row)
         }
