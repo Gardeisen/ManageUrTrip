@@ -69,10 +69,14 @@ class TravelSetViewModel {
             self.dataset.append(trav)
             self.delegate?.travelAdded(at: IndexPath(row:self.modelset.count() - 1,section:0))
             
-            
-            print(self.modelset.count() - 1)
         }}
     
+    public func delete(travelAt index: Int){
+        TravelDAO.delete(travel: self.dataset[index])
+        self.modelset.remove(travel: self.dataset[index])
+        self.dataset.remove(at: index)
+        self.delegate?.travelDeleted(at: IndexPath(row: index,section:0))
+    }
     /// numbers of travels
     ///
     /// - Returns: number of travels

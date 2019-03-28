@@ -17,6 +17,7 @@ class TravelDAO{
     }
     static func delete(travel: Travel){
         CoreDataManager.context.delete(travel)
+        self.save()
     }
     static func fetchAll() -> [Travel]?{
         self.request.predicate = nil

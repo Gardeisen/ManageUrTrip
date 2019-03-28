@@ -51,7 +51,9 @@ class Travel_TableViewController: NSObject, UITableViewDataSource, TravelSetView
     }
     
     func travelDeleted(at indexPath: IndexPath) {
-        
+        self.tableView.beginUpdates()
+        self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.middle)
+        self.tableView.endUpdates()
     }
     
     func travelUpdated(at indexPath: IndexPath) {
@@ -66,6 +68,10 @@ class Travel_TableViewController: NSObject, UITableViewDataSource, TravelSetView
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        
+        if(editingStyle == UITableViewCell.EditingStyle.delete){
+            self.travelSet_ViewModel.delete(travelAt: indexPath.row)
+        }
     }
     
     func tableView(_ tableView: UITableView,
