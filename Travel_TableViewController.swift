@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Travel_TableViewController: NSObject, UITableViewDataSource, TravelSetViewModelDelegate  {
+class Travel_TableViewController: NSObject, UITableViewDelegate, UITableViewDataSource,  TravelSetViewModelDelegate  {
 
     @IBOutlet weak var tableView: UITableView!
     var travelSet_ViewModel : TravelSetViewModel
@@ -67,18 +67,22 @@ class Travel_TableViewController: NSObject, UITableViewDataSource, TravelSetView
         self.tableView.endUpdates()
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
-        
-        
-        //let alertHelper = AlertHelper()
-        //alertHelper.alert(title: "", message: "")
-        if(editingStyle == UITableViewCell.EditingStyle.delete){
-            self.travelSet_ViewModel.delete(travelAt: indexPath.row)
-        }
+    func deleteHandlerAction(action: UITableViewRowAction,indexPath: IndexPath) -> Void {
+        self.travelSet_ViewModel.delete(travelAt: indexPath.row)
     }
     
-    func tableView(_ tableView: UITableView,
-                   canEditRowAt indexPath: IndexPath) -> Bool{
-       return true
+    func editHandlerAction(action: UITableViewRowAction,indexPath: IndexPath) -> Void {
+        
     }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .default, title: "Delete", handler: self.deleteHandlerAction)
+        delete.backgroundColor = UIColor.red
+        //**** Faire une fonction editHandlerAction*****
+        let edit = UITableViewRowAction(style: .default, title: "Edit", handler: self.editHandlerAction)
+        edit.backgroundColor = UIColor.orange
+        return [delete, edit]
+        
+    }
+    
 }
