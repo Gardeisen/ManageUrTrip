@@ -64,6 +64,7 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
             guard let textField1 = alert.textFields?.first , let firstname = textField1.text else {
                 return
             }
+            
             let friend = Friend(firstname: firstname, lastname: "")
             //friend.participates = self.newTravel
             self.participants.append(friend)
