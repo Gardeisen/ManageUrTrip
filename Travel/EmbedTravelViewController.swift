@@ -60,11 +60,15 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
         
         
         alert.addTextField { (firstname) in
-            firstname.placeholder = "Enter the firstname"
+            firstname.placeholder = "Enter firstname"
         }
-        alert.addTextField { (firstname) in
-            firstname.placeholder = "Enter the lastname"
+        alert.addTextField { (lastname) in
+            lastname.placeholder = "Enter lastname"
         }
+        alert.addTextField { (lastname) in
+            lastname.placeholder = "Enter arrival date"
+        }
+        
         let saveAction = UIAlertAction(title: "SAVE", style: .default) {
             
             [unowned self] action in
@@ -81,7 +85,6 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
         }
         let cancelAction = UIAlertAction(title: "CANCEL", style: .default)
         
-        alert.addTextField()
         alert.addAction(cancelAction)
         alert.addAction(saveAction)
         

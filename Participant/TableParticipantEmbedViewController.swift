@@ -62,7 +62,7 @@ class TableParticipantEmbedViewController: NSObject, UITableViewDataSource, Frie
         guard let friend = self.friendSetViewModel.get(friendAt: indexPath.row) else{
             fatalError("no travel found at this index")
         }
-        cell.textLabel?.text = " \(friend.firstname) "
+        cell.textLabel?.text = " \(friend.fullname) "
         
         return cell
     }

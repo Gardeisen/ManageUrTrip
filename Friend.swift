@@ -16,6 +16,8 @@ extension Friend {
     
     public var lastname : String { return self.pLastname ?? "" }
     
+    public var fullname : String { return "\(self.firstname) \(self.lastname)" }
+    
     public var end : Date? {
         get{ return (self.pDeparture as Date?) }
         set{ self.pDeparture = (newValue as NSDate?) }
