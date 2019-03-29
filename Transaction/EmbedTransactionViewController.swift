@@ -2,7 +2,7 @@
 //  EmbedTransactionViewController.swift
 //  ManageUrTrip
 //
-//  Created by etud 2 ig on 29/03/2019.
+//  Created by Marine G on 29/03/2019.
 //  Copyright © 2019 Marine GARDEISEN. All rights reserved.
 //
 
@@ -18,6 +18,10 @@ class EmbedTransactionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var EmbedTransactionController: TableFriends_TransactionViewController!
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.EmbedTransactionController.friendSetViewModel = FriendSetViewModel(travel: )
+    }
     
     
     // MARK: - TextFieldDelegate

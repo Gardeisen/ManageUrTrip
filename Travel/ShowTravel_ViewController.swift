@@ -42,6 +42,14 @@ class ShowTravel_ViewController: UIViewController {
             }
             
         }
+        if (segue.identifier == "showSpending") {
+            
+            if let destination = segue.destination as? SpendingViewController {
+                destination.travelSelected = self.travelSelected
+                
+            }
+            
+        }
         
     }
 }

@@ -11,6 +11,7 @@ import UIKit
 class SpendingViewController: UIViewController {
     
     @IBOutlet var TransactionTableViewController: Transaction_TableViewController!
+    var travelSelected : Travel? = Travel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
