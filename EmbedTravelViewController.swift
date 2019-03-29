@@ -58,15 +58,22 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
         
         let alert = UIAlertController(title: "Add Friend to this Trip ", message: "insert Participant", preferredStyle: .alert)
         
+        
+        alert.addTextField { (firstname) in
+            firstname.placeholder = "Enter the firstname"
+        }
+        alert.addTextField { (firstname) in
+            firstname.placeholder = "Enter the lastname"
+        }
         let saveAction = UIAlertAction(title: "SAVE", style: .default) {
             
             [unowned self] action in
-            guard let textField1 = alert.textFields?.first , let firstname = textField1.text else {
+            guard let textFields = alert.textFields,  let firstname = textFields[0].text,  let lastname = textFields[1].text else {
                 return
             }
-            
-            let friend = Friend(firstname: firstname, lastname: "")
-            //friend.participates = self.newTravel
+
+
+            let friend = Friend(firstname: firstname, lastname: lastname)
             self.participants.append(friend)
             self.tableParticipantEmbedTravel.friendSetViewModel.add(friend: friend)
             
