@@ -768,6 +768,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="aUF-E9-Ic6" id="GtD-xf-TCL"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -803,11 +806,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="EmbedTransactionController" destination="aUF-E9-Ic6" id="wie-a9-VFe"/>
                         <outlet property="interPrice" destination="ECd-lr-UML" id="lTR-wY-Ren"/>
                         <outlet property="textTitle" destination="CYe-FE-mz3" id="4zp-WB-hhd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4H9-nD-p6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="aUF-E9-Ic6" customClass="TableFriends_TransactionViewController" customModule="ManageUrTrip" customModuleProvider="target">
+                    <connections>
+                        <outlet property="tableView" destination="egR-Sa-woF" id="ixj-Ed-0Fd"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="4181.6000000000004" y="98.50074962518741"/>
         </scene>

@@ -15,6 +15,7 @@ class EmbedTransactionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var interPrice: UITextField!
     
     
+    @IBOutlet var EmbedTransactionController: TableFriends_TransactionViewController!
     
     
     

@@ -10,6 +10,8 @@ import UIKit
 
 class TableFriends_TransactionViewController: NSObject, UITableViewDataSource, FriendSetViewModelDelegate {
     
+    
+    @IBOutlet weak var tableView: UITableView!
     var friendSetViewModel : FriendSetViewModel
     
     override init() {
