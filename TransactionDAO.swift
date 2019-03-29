@@ -22,15 +22,7 @@ class TransactionDAO {
         self.request.predicate = nil
         //changer le predicate pour que ca correspond a un travel
         do{
-            //return try CoreDataManager.context.fetch(self.request)
-            let t1 : Transaction  = Transaction(name: "Café", price: 3.00)
-            let t2 : Transaction  = Transaction(name: "Resto", price: 25.95)
-            
-            var tt : [Transaction] = []
-            tt.append(t1)
-            tt.append(t2)
-            
-            return tt
+            return try CoreDataManager.context.fetch(self.request)
             
         }
         catch{

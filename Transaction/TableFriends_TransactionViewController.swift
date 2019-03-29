@@ -58,7 +58,7 @@ class TableFriends_TransactionViewController: NSObject, UITableViewDataSource, F
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "payFor", for: indexPath)
         guard let friend = self.friendSetViewModel.get(friendAt: indexPath.row) else{
             fatalError("no travel found at this index")
         }

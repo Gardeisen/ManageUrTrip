@@ -46,7 +46,7 @@ class ShowTravel_ViewController: UIViewController {
             
             if let destination = segue.destination as? SpendingViewController {
                 destination.travelSelected = self.travelSelected
-                
+                print("je passe le Travel au spending view controller")
             }
             
         }

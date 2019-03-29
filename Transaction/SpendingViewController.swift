@@ -11,7 +11,7 @@ import UIKit
 class SpendingViewController: UIViewController {
     
     @IBOutlet var TransactionTableViewController: Transaction_TableViewController!
-    var travelSelected : Travel? = Travel()
+    var travelSelected : Travel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,9 @@ class SpendingViewController: UIViewController {
         
         if (segue.identifier == "newSpent") {
             
-            if let destination = segue.destination as? EmbedTransactionViewController {
-                destination.travelSelected = self.travelSelected
+            if let destination = segue.destination as? CreateSpentViewController {
+                destination.travelSelect = self.travelSelected
+                print("je passe le travel au embed view")
                 
             }
             

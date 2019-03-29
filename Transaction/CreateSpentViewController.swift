@@ -10,4 +10,16 @@ import UIKit
 
 class CreateSpentViewController: UIViewController {
 
+    var travelSelect : Travel?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? EmbedTransactionViewController {
+            destination.travelSelected = self.travelSelect
+            print("je passe le travel au embed view")
+            
+        }
+        
+    }
+    
 }
