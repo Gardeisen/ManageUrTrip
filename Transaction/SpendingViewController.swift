@@ -25,6 +25,14 @@ class SpendingViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if (segue.identifier == "newSpent") {
+            
+            if let destination = segue.destination as? EmbedTransactionViewController {
+                destination.travelSelected = self.travelSelected
+                
+            }
+            
+        }
     }
     
 }

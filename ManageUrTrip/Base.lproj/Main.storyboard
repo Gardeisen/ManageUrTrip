@@ -230,7 +230,7 @@
                     <navigationItem key="navigationItem" title="Spending" id="r66-nE-DNv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1jw-Vd-tOO">
                             <connections>
-                                <segue destination="lEE-0H-dqA" kind="presentation" id="LI2-gW-M6g"/>
+                                <segue destination="lEE-0H-dqA" kind="presentation" identifier="newSpent" id="LI2-gW-M6g"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
