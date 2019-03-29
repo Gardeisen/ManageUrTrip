@@ -247,10 +247,10 @@
             </objects>
             <point key="canvasLocation" x="1584.8" y="-367.46626686656674"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Spent View Controller-->
         <scene sceneID="1Ma-sq-jDc">
             <objects>
-                <viewController id="lEE-0H-dqA" sceneMemberID="viewController">
+                <viewController id="lEE-0H-dqA" customClass="CreateSpentViewController" customModule="ManageUrTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6FI-3J-HKh"/>
                         <viewControllerLayoutGuide type="bottom" id="QK7-cQ-wHm"/>
@@ -262,7 +262,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KoS-Gx-7lw">
                                 <rect key="frame" x="0.0" y="62" width="375" height="605"/>
                                 <connections>
-                                    <segue destination="LwL-ti-EgW" kind="embed" id="4hE-TW-Y6Z"/>
+                                    <segue destination="LwL-ti-EgW" kind="embed" identifier="NewSpent" id="4hE-TW-Y6Z"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Spent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVp-8e-Lgw">
@@ -652,10 +652,10 @@
             </objects>
             <point key="canvasLocation" x="952.79999999999995" y="1003.4482758620691"/>
         </scene>
-        <!--View Controller-->
+        <!--Embed Transaction View Controller-->
         <scene sceneID="iMd-1x-eS8">
             <objects>
-                <viewController id="LwL-ti-EgW" sceneMemberID="viewController">
+                <viewController id="LwL-ti-EgW" customClass="EmbedTransactionViewController" customModule="ManageUrTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zCc-2E-0W3"/>
                         <viewControllerLayoutGuide type="bottom" id="lir-GD-vC8"/>

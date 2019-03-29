@@ -38,6 +38,8 @@
 		82D26FD5224BF37200019B14 /* ParticipatingFriendviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D26FD4224BF37200019B14 /* ParticipatingFriendviewController.swift */; };
 		82D26FD7224BF41600019B14 /* TableParticipatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D26FD6224BF41600019B14 /* TableParticipatingController.swift */; };
 		E74A72BA224D0DCF0076C58C /* TableParticipantEmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */; };
+		E7B6E088224E635E00EB6843 /* CreateSpentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6E087224E635E00EB6843 /* CreateSpentViewController.swift */; };
+		E7B6E08A224E638B00EB6843 /* EmbedTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6E089224E638B00EB6843 /* EmbedTransactionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		82D26FD4224BF37200019B14 /* ParticipatingFriendviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipatingFriendviewController.swift; sourceTree = "<group>"; };
 		82D26FD6224BF41600019B14 /* TableParticipatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableParticipatingController.swift; sourceTree = "<group>"; };
 		E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableParticipantEmbedViewController.swift; sourceTree = "<group>"; };
+		E7B6E087224E635E00EB6843 /* CreateSpentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSpentViewController.swift; sourceTree = "<group>"; };
+		E7B6E089224E638B00EB6843 /* EmbedTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedTransactionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +240,8 @@
 				82D26FD4224BF37200019B14 /* ParticipatingFriendviewController.swift */,
 				82D26FD6224BF41600019B14 /* TableParticipatingController.swift */,
 				E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */,
+				E7B6E087224E635E00EB6843 /* CreateSpentViewController.swift */,
+				E7B6E089224E638B00EB6843 /* EmbedTransactionViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -380,6 +386,7 @@
 				3B3A38B2224B7C0B00D4C5D5 /* TransactionSet.swift in Sources */,
 				82D26FCD224BEEDC00019B14 /* FriendSet.swift in Sources */,
 				4A2854BA224A630B007EB180 /* TravelSetViewModel.swift in Sources */,
+				E7B6E08A224E638B00EB6843 /* EmbedTransactionViewController.swift in Sources */,
 				827E3358224A282600DCA34F /* ViewController.swift in Sources */,
 				82D26FD5224BF37200019B14 /* ParticipatingFriendviewController.swift in Sources */,
 				3B3A38AC224B7BA700D4C5D5 /* TransactionDAO.swift in Sources */,
@@ -399,6 +406,7 @@
 				E74A72BA224D0DCF0076C58C /* TableParticipantEmbedViewController.swift in Sources */,
 				4A84D7F2224A97C6001D644A /* CreateTravel_ViewController.swift in Sources */,
 				827E3356224A282600DCA34F /* AppDelegate.swift in Sources */,
+				E7B6E088224E635E00EB6843 /* CreateSpentViewController.swift in Sources */,
 				3B3A38B6224B819500D4C5D5 /* SpendingViewController.swift in Sources */,
 				3B3A38B0224B7BEB00D4C5D5 /* Transaction.swift in Sources */,
 			);
