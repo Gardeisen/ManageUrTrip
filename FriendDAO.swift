@@ -22,16 +22,7 @@ class FriendDAO {
         self.request.predicate = nil
         //changer le predicate pour que ca correspond aux participants d'un voyages precis d un travel
         do{
-            //return try CoreDataManager.context.fetch(self.request)
-            //let t1 : Transaction  = Transaction(name: "Café", price: 3.00)
-           // let t2 : Transaction  = Transaction(name: "Resto", price: 25.95)
-            
-            let tt : [Friend] = []
-            //tt.append(t1)
-            //tt.append(t2)
-            
-            return tt
-            
+            return try CoreDataManager.context.fetch(self.request)
         }
         catch{
             return nil

@@ -17,11 +17,23 @@ class EmbedTransactionViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var EmbedTransactionController: TableFriends_TransactionViewController!
     
+    var travelSelected : Travel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         //self.EmbedTransactionController.friendSetViewModel = FriendSetViewModel(travel: )
+=======
+        if let t = self.travelSelected {
+            self.EmbedTransactionController.friendSetViewModel = FriendSetViewModel(travel : t)
+            print("on initialise bien le controller avec le voyage")
+        }
+        else {
+            print("on initialise pas le controller")
+        }
+>>>>>>> 1afaccb881ea08abf3cca86d9c2f11e39e5aa9b1
     }
+
     
     
     // MARK: - TextFieldDelegate

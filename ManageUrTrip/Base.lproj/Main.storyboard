@@ -230,7 +230,7 @@
                     <navigationItem key="navigationItem" title="Spending" id="r66-nE-DNv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1jw-Vd-tOO">
                             <connections>
-                                <segue destination="lEE-0H-dqA" kind="presentation" id="LI2-gW-M6g"/>
+                                <segue destination="lEE-0H-dqA" kind="presentation" identifier="newSpent" id="LI2-gW-M6g"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -262,7 +262,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KoS-Gx-7lw">
                                 <rect key="frame" x="0.0" y="62" width="375" height="605"/>
                                 <connections>
-                                    <segue destination="LwL-ti-EgW" kind="embed" identifier="NewSpent" id="4hE-TW-Y6Z"/>
+                                    <segue destination="LwL-ti-EgW" kind="embed" identifier="newSpent" id="4hE-TW-Y6Z"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Spent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVp-8e-Lgw">
@@ -769,7 +769,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="aUF-E9-Ic6" id="GtD-xf-TCL"/>
+                                    <outlet property="dataSource" destination="aUF-E9-Ic6" id="f4S-Vd-Jm4"/>
                                 </connections>
                             </tableView>
                         </subviews>
