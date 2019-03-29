@@ -16,6 +16,12 @@ class ParticipatingFriendviewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let atravel = self.travelSelected {
+            self.ParticipantsViewController.friendSet_ViewModel = FriendSetViewModel(travel: atravel)
+            
+        } else {
+            
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }

@@ -27,7 +27,6 @@ class ShowTravel_ViewController: UIViewController {
             
         } else {
             self.name.text = ""
-            
         }
     }
     
@@ -37,13 +36,9 @@ class ShowTravel_ViewController: UIViewController {
         if (segue.identifier == "ParticipantsShow") {
             
             if let destination = segue.destination as? ParticipatingFriendviewController {
-                
+                //on fait passer le voyage dans la vue d'après
                 destination.travelSelected = self.travelSelected
                 
-                /*guard let friends = self.ParticipantsViewController.friendSet_ViewModel else{
-                    fatalError("no travel found at this index")
-                }
-                destination.travelSelected = friends*/
             }
             
         }

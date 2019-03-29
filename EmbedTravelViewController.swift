@@ -17,6 +17,7 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var tableParticipantEmbedTravel: TableParticipantEmbedViewController!
     var newTravel : Travel?
+    var participants : [Friend] = []
     
     // preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -25,6 +26,17 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
         if segue.identifier == "save" { //UNWIND LINK
             let title : String  = self.title_field.text!
             self.newTravel = Travel(t: title)
+            for f in participants {
+                f.participates = self.newTravel
+            }
+            
+        }
+        else if segue.identifier == "cancel"{
+            if let traveltoCancel = self.newTravel{
+                TravelDAO.delete(travel: traveltoCancel)
+                
+            }
+            
         }
         else{
             self.newTravel = nil
@@ -45,14 +57,17 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
     @IBAction func addParticipantsFriend(_ sender: Any) {
         
         let alert = UIAlertController(title: "Add Friend to this Trip ", message: "insert Participant", preferredStyle: .alert)
+        
         let saveAction = UIAlertAction(title: "SAVE", style: .default) {
+            
             [unowned self] action in
             guard let textField1 = alert.textFields?.first , let firstname = textField1.text else {
                 return
             }
             let friend = Friend(firstname: firstname, lastname: "")
+            //friend.participates = self.newTravel
+            self.participants.append(friend)
             self.tableParticipantEmbedTravel.friendSetViewModel.add(friend: friend)
-            self.tableParticipantEmbedTravel.tableView.reloadData()
             
             
         }
@@ -67,18 +82,6 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
-    @IBAction func unwindToAddTravel(sender: UIStoryboardSegue) {
-        if(sender.identifier == "save"){ //Unwind LINK
-            // let newTravelController = sender.source as! CreateTravel_ViewController
-            //let embedTravelController = newTravelController.childViewControllers[0] as! EmbedTravelViewController
-            let addParticipantsController = sender.source as! addParticipantViewController
-            if let friend = addParticipantsController.newFriend{
-                //self.TravelTableViewController.travelSet_ViewModel.add(trav: travel)
-                CoreDataManager.save()
-            }
-        }
-    }
     
     
     

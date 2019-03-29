@@ -42,31 +42,28 @@ class FriendSetViewModel {
     var delegate : FriendSetViewModelDelegate? = nil
     
     init() {
-        if let data = FriendDAO.fetchAll(){
-            self.modelset = FriendSet(friend: data)
-            for p in self.modelset{
-                self.dataset.append(p)
-            }
-        }
-        else{
-            self.modelset = FriendSet()
-        }
+        self.modelset = FriendSet()
     }
+ 
     
-    /*init(travel : Travel) {
+    init(travel : Travel) {
         if let data = travel.isComposedBy {
-            for p in data{
-                self.dataset.append(p)
+            
+            for f in data.allObjects as! [Friend] {
+                
+                self.dataset.append(f)
+                
             }
         self.modelset = FriendSet(friend: self.dataset)
         }
         else{
             self.modelset = FriendSet()
         }
-    }*/
+    }
     
-    convenience init(delegate : FriendSetViewModelDelegate) {
-        self.init()
+    convenience init(delegate : FriendSetViewModelDelegate, t : Travel) {
+        //self.init()
+        self.init(travel : t)
         self.delegate = delegate
         
     }
@@ -81,8 +78,7 @@ class FriendSetViewModel {
             self.dataset.append(friend)
             self.delegate?.friendAdded(at: IndexPath(row:self.modelset.count() - 1,section:0))
             
-            
-            print(self.modelset.count() - 1)
+        
         }}
     
     public func delete(friendAt index: Int){
