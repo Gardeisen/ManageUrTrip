@@ -810,6 +810,10 @@
                             <constraint firstAttribute="trailing" secondItem="egR-Sa-woF" secondAttribute="trailing" id="xXR-Jp-HqR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="interPrice" destination="ECd-lr-UML" id="lTR-wY-Ren"/>
+                        <outlet property="textTitle" destination="CYe-FE-mz3" id="4zp-WB-hhd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4H9-nD-p6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

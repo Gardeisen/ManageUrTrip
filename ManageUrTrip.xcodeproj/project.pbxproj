@@ -40,6 +40,7 @@
 		E74A72BA224D0DCF0076C58C /* TableParticipantEmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */; };
 		E7B6E088224E635E00EB6843 /* CreateSpentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6E087224E635E00EB6843 /* CreateSpentViewController.swift */; };
 		E7B6E08A224E638B00EB6843 /* EmbedTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6E089224E638B00EB6843 /* EmbedTransactionViewController.swift */; };
+		E7B6E08C224E66D200EB6843 /* TableFriends_TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6E08B224E66D200EB6843 /* TableFriends_TransactionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableParticipantEmbedViewController.swift; sourceTree = "<group>"; };
 		E7B6E087224E635E00EB6843 /* CreateSpentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSpentViewController.swift; sourceTree = "<group>"; };
 		E7B6E089224E638B00EB6843 /* EmbedTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedTransactionViewController.swift; sourceTree = "<group>"; };
+		E7B6E08B224E66D200EB6843 /* TableFriends_TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFriends_TransactionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 				E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */,
 				E7B6E087224E635E00EB6843 /* CreateSpentViewController.swift */,
 				E7B6E089224E638B00EB6843 /* EmbedTransactionViewController.swift */,
+				E7B6E08B224E66D200EB6843 /* TableFriends_TransactionViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -384,6 +387,7 @@
 				82D26FD7224BF41600019B14 /* TableParticipatingController.swift in Sources */,
 				4A2854B8224A62E2007EB180 /* TravelDAO.swift in Sources */,
 				3B3A38B2224B7C0B00D4C5D5 /* TransactionSet.swift in Sources */,
+				E7B6E08C224E66D200EB6843 /* TableFriends_TransactionViewController.swift in Sources */,
 				82D26FCD224BEEDC00019B14 /* FriendSet.swift in Sources */,
 				4A2854BA224A630B007EB180 /* TravelSetViewModel.swift in Sources */,
 				E7B6E08A224E638B00EB6843 /* EmbedTransactionViewController.swift in Sources */,

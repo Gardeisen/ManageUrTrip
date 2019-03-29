@@ -8,6 +8,24 @@
 
 import UIKit
 
-class EmbedTransactionViewController: UIViewController {
+class EmbedTransactionViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var textTitle: UITextField!
+    
+    @IBOutlet weak var interPrice: UITextField!
+    
+    
+    
+    
+    
+    
+    // MARK: - TextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text{
+            if text != ""{
+                textField.resignFirstResponder()
+                return true
+            } }
+        return false
+    }
 }
