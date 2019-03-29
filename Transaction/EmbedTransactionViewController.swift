@@ -20,7 +20,7 @@ class EmbedTransactionViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.EmbedTransactionController.friendSetViewModel = FriendSetViewModel(travel: )
+        //self.EmbedTransactionController.friendSetViewModel = FriendSetViewModel(travel: )
     }
     
     

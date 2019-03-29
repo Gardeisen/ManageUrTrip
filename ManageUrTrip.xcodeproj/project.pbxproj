@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B267998224E7488006F2C9E /* EditTravel_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B267997224E7488006F2C9E /* EditTravel_ViewController.swift */; };
 		3B3A38AC224B7BA700D4C5D5 /* TransactionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A38AB224B7BA700D4C5D5 /* TransactionDAO.swift */; };
 		3B3A38AE224B7BD200D4C5D5 /* TransactionSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A38AD224B7BD200D4C5D5 /* TransactionSetViewModel.swift */; };
 		3B3A38B0224B7BEB00D4C5D5 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A38AF224B7BEB00D4C5D5 /* Transaction.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B267997224E7488006F2C9E /* EditTravel_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTravel_ViewController.swift; sourceTree = "<group>"; };
 		3B3A38AB224B7BA700D4C5D5 /* TransactionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDAO.swift; sourceTree = "<group>"; };
 		3B3A38AD224B7BD200D4C5D5 /* TransactionSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSetViewModel.swift; sourceTree = "<group>"; };
 		3B3A38AF224B7BEB00D4C5D5 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				4A84D7EF224A97A7001D644A /* ShowTravel_ViewController.swift */,
 				4A84D7F1224A97C6001D644A /* CreateTravel_ViewController.swift */,
 				3BEE7576224B6ECB00D2ED38 /* EmbedTravelViewController.swift */,
+				3B267997224E7488006F2C9E /* EditTravel_ViewController.swift */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				827E3358224A282600DCA34F /* ViewController.swift in Sources */,
 				82D26FD5224BF37200019B14 /* ParticipatingFriendviewController.swift in Sources */,
 				3B3A38AC224B7BA700D4C5D5 /* TransactionDAO.swift in Sources */,
+				3B267998224E7488006F2C9E /* EditTravel_ViewController.swift in Sources */,
 				3B3A38AE224B7BD200D4C5D5 /* TransactionSetViewModel.swift in Sources */,
 				4A2854B6224A62B0007EB180 /* Travel.swift in Sources */,
 				3BEE7577224B6ECB00D2ED38 /* EmbedTravelViewController.swift in Sources */,

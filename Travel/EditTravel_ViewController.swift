@@ -8,6 +8,16 @@
 
 import UIKit
 
-class EditTravel_ViewController: NSObject {
-
+class EditTravel_ViewController: ViewController {
+    var travelToEdit : Travel?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("ok prepare")
+        if segue.identifier == "embedEditTravel"{
+            if let embedController = segue.destination as? EmbedTravelViewController{
+                embedController.newTravel = self.travelToEdit
+                print(travelToEdit == nil)
+            }
+        }
+    }
 }

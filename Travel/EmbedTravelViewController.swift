@@ -19,10 +19,19 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
     var newTravel : Travel?
     var participants : [Friend] = []
     
+    override func viewDidLoad() {
+        
+            if let travelToUpdate = self.newTravel{
+                self.title_field.text = travelToUpdate.title
+                print("ok")
+            }
+        print("non ok")
+    }
     // preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+            
         if segue.identifier == "save" { //UNWIND LINK
             let title : String  = self.title_field.text!
             self.newTravel = Travel(t: title)
@@ -65,8 +74,8 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
         alert.addTextField { (lastname) in
             lastname.placeholder = "Enter lastname"
         }
-        alert.addTextField { (lastname) in
-            lastname.placeholder = "Enter arrival date"
+        alert.addTextField { (start) in
+            start.placeholder = "Enter arrival date"
         }
         
         let saveAction = UIAlertAction(title: "SAVE", style: .default) {

@@ -593,10 +593,10 @@
             </objects>
             <point key="canvasLocation" x="-308" y="1006"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Travel View Controller-->
         <scene sceneID="9qO-Rz-dGD">
             <objects>
-                <viewController id="CXZ-VP-FIb" sceneMemberID="viewController">
+                <viewController id="CXZ-VP-FIb" customClass="EditTravel_ViewController" customModule="ManageUrTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rw0-pY-iJC"/>
                         <viewControllerLayoutGuide type="bottom" id="da2-db-A6t"/>
@@ -620,7 +620,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6D-cf-K6r">
                                 <rect key="frame" x="0.0" y="54" width="375" height="613"/>
                                 <connections>
-                                    <segue destination="Ze3-1A-MA0" kind="embed" id="qnb-Tp-gGB"/>
+                                    <segue destination="Ze3-1A-MA0" kind="embed" identifier="embedEditTravel" id="qnb-Tp-gGB"/>
                                 </connections>
                             </containerView>
                         </subviews>

@@ -48,6 +48,22 @@ class ViewController: UIViewController {
             }
             
         }
+        else if (segue.identifier == "EditTravel"){
+            if let destination = segue.destination as? EditTravel_ViewController{
+                if let cell = sender as? UITableViewCell{
+                    
+                    guard let indexPath = self.TravelTableViewController.tableView.indexPath(for: cell) else{
+                        return
+                    }
+                    
+                    guard let travel = self.TravelTableViewController.travelSet_ViewModel.get(travelAt: indexPath.row) else{
+                        fatalError("no travel found at this index")
+                    }
+                    destination.travelToEdit = travel
+                    //self.TravelTableViewController.mainVC = nil
+                }
+            }
+        }
         
     }
     
