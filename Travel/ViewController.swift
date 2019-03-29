@@ -43,7 +43,7 @@ class ViewController: UIViewController {
                         fatalError("no travel found at this index")
                     }
                     destination.travelSelected = travel
-                    
+                    //self.TravelTableViewController.mainVC = nil
                 }
             }
             

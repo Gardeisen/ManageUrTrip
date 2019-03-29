@@ -79,7 +79,7 @@
 		4A84D7F1224A97C6001D644A /* CreateTravel_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTravel_ViewController.swift; sourceTree = "<group>"; };
 		827E3352224A282600DCA34F /* ManageUrTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageUrTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		827E3355224A282600DCA34F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		827E3357224A282600DCA34F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ManageUrTrip/ViewController.swift; sourceTree = "<group>"; };
+		827E3357224A282600DCA34F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		827E335A224A282600DCA34F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		827E335D224A282600DCA34F /* ManageUrTrip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManageUrTrip.xcdatamodel; sourceTree = "<group>"; };
 		827E335F224A282600DCA34F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +128,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B267994224E6E5D006F2C9E /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				827E3357224A282600DCA34F /* ViewController.swift */,
+				4A2854BB224A633E007EB180 /* Travel_TableViewController.swift */,
+				4A84D7EF224A97A7001D644A /* ShowTravel_ViewController.swift */,
+				4A84D7F1224A97C6001D644A /* CreateTravel_ViewController.swift */,
+				3BEE7576224B6ECB00D2ED38 /* EmbedTravelViewController.swift */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		3B267995224E6E6E006F2C9E /* Participant */ = {
+			isa = PBXGroup;
+			children = (
+				82D26FD4224BF37200019B14 /* ParticipatingFriendviewController.swift */,
+				82D26FD6224BF41600019B14 /* TableParticipatingController.swift */,
+				E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */,
+			);
+			path = Participant;
+			sourceTree = "<group>";
+		};
+		3B267996224E6EB2006F2C9E /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				3B3A38B3224B7C3400D4C5D5 /* Transaction_TableViewController.swift */,
+				3B3A38B5224B819500D4C5D5 /* SpendingViewController.swift */,
+				E7B6E087224E635E00EB6843 /* CreateSpentViewController.swift */,
+				E7B6E089224E638B00EB6843 /* EmbedTransactionViewController.swift */,
+				E7B6E08B224E66D200EB6843 /* TableFriends_TransactionViewController.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
 		3BF7A0BC224D06DA00C85846 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,19 +266,9 @@
 		827E3389224A287900DCA34F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				827E3357224A282600DCA34F /* ViewController.swift */,
-				4A2854BB224A633E007EB180 /* Travel_TableViewController.swift */,
-				4A84D7EF224A97A7001D644A /* ShowTravel_ViewController.swift */,
-				4A84D7F1224A97C6001D644A /* CreateTravel_ViewController.swift */,
-				3BEE7576224B6ECB00D2ED38 /* EmbedTravelViewController.swift */,
-				3B3A38B3224B7C3400D4C5D5 /* Transaction_TableViewController.swift */,
-				3B3A38B5224B819500D4C5D5 /* SpendingViewController.swift */,
-				82D26FD4224BF37200019B14 /* ParticipatingFriendviewController.swift */,
-				82D26FD6224BF41600019B14 /* TableParticipatingController.swift */,
-				E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */,
-				E7B6E087224E635E00EB6843 /* CreateSpentViewController.swift */,
-				E7B6E089224E638B00EB6843 /* EmbedTransactionViewController.swift */,
-				E7B6E08B224E66D200EB6843 /* TableFriends_TransactionViewController.swift */,
+				3B267996224E6EB2006F2C9E /* Transaction */,
+				3B267995224E6E6E006F2C9E /* Participant */,
+				3B267994224E6E5D006F2C9E /* Travel */,
 			);
 			name = Controller;
 			path = ..;
