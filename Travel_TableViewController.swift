@@ -10,13 +10,18 @@ import UIKit
 
 class Travel_TableViewController: NSObject, UITableViewDelegate, UITableViewDataSource,  TravelSetViewModelDelegate  {
 
-    @IBOutlet weak var tableView: UITableView!
+    var tableView: UITableView!
+    var mainVC : ViewController!
     var travelSet_ViewModel : TravelSetViewModel
     
-    override init() {
+    init(tableView: UITableView, mainViewController: ViewController) {
         self.travelSet_ViewModel = TravelSetViewModel()
+        self.tableView = tableView
+        self.mainVC = mainViewController
         super.init()
         self.travelSet_ViewModel.delegate=self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
     
     
@@ -72,7 +77,7 @@ class Travel_TableViewController: NSObject, UITableViewDelegate, UITableViewData
     }
     
     func editHandlerAction(action: UITableViewRowAction,indexPath: IndexPath) -> Void {
-        
+        self.mainVC.performSegue(withIdentifier: "editTravel", sender: self)
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

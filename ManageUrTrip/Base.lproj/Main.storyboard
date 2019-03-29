@@ -500,10 +500,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="3D6-2c-658" id="9gQ-bS-IIc"/>
-                                    <outlet property="delegate" destination="3D6-2c-658" id="Pll-G4-Woz"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -524,15 +520,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="TravelTableViewController" destination="3D6-2c-658" id="dgp-NJ-jgs"/>
+                        <outlet property="travelTableView" destination="pTE-eh-of9" id="anH-5S-OaZ"/>
+                        <segue destination="CXZ-VP-FIb" kind="presentation" identifier="editTravel" id="6RP-fL-6Oh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="3D6-2c-658" customClass="Travel_TableViewController" customModule="ManageUrTrip" customModuleProvider="target">
-                    <connections>
-                        <outlet property="tableView" destination="pTE-eh-of9" id="0th-bs-jgP"/>
-                    </connections>
-                </customObject>
             </objects>
             <point key="canvasLocation" x="225" y="121"/>
         </scene>

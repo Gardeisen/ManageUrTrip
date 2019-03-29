@@ -11,13 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet var TravelTableViewController: Travel_TableViewController!
+    var TravelTableViewController: Travel_TableViewController!
     
-
+    @IBOutlet weak var travelTableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.TravelTableViewController = Travel_TableViewController(tableView: self.travelTableView, mainViewController: self)
     }
 
     override func didReceiveMemoryWarning() {
