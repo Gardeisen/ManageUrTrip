@@ -8,7 +8,8 @@
 
 import UIKit
 
-class EmbedTransactionViewController: UIViewController, UITextFieldDelegate {
+class EmbedTransactionViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate,
+UIPickerViewDataSource{
 
     @IBOutlet weak var textTitle: UITextField!
     
@@ -20,10 +21,28 @@ class EmbedTransactionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var EmbedTransactionController: TableFriends_TransactionViewController!
     
     var travelSelected : Travel!
+    var payedBy_friend : Friend? = nil
+    
+    //var pickerData : [String] = [String]()
+    
+    var pickerData : [Friend] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //set picker data
+        if let _data = TravelDAO.getFriendOfATravel(travel: travelSelected){
+            
+            for f in _data.allObjects as! [Friend]{
+                self.pickerData.append(f)
+            }
+        }
+        
+        //connect the pickerView :
+        self.payedBy.delegate = self
+        self.payedBy.dataSource = self
+        //pickerData = ["it 1", "it2", "it3"]
+        
         if let t = self.travelSelected {
             self.EmbedTransactionController.friendSetViewModel = FriendSetViewModel(travel : t)
             print("on initialise bien le controller avec le voyage")
@@ -50,6 +69,26 @@ class EmbedTransactionViewController: UIViewController, UITextFieldDelegate {
             
         } }
     
+    //number of columns of data
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    //number of roxs of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    //the data to return for the row and column that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row].fullname
+       
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //the friend selected in the picker :
+        payedBy_friend = pickerData[row]
+    }
     // MARK: - TextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let text = textField.text{

@@ -23,21 +23,18 @@ class TravelDAO{
         self.request.predicate = nil
         do{
             return try CoreDataManager.context.fetch(self.request)
-            /*let t1 : Travel  = Travel(t : "turquie")
-            let t2 : Travel  = Travel(t : "alaska")
-            
-            var tt : [Travel] = []
-            tt.append(t1)
-            tt.append(t2)
-            
-            return tt*/
-            
+  
         }
         catch{
             return nil
         }
         
     }
+    
+    static func getFriendOfATravel(travel : Travel) -> NSSet?{
+        return travel.isComposedBy
+    }
+    
     /// number of elements
     static var count: Int{
         self.request.predicate = nil
