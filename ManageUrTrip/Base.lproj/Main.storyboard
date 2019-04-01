@@ -704,6 +704,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="hXh-Hk-Zod" kind="unwind" identifier="cancel" unwindAction="unwindToThisViewWithSender:" id="M1n-Km-naK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payed For :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baU-ek-TV1">
                                 <rect key="frame" x="15" y="282" width="96" height="24"/>
@@ -750,6 +753,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="hXh-Hk-Zod" kind="unwind" identifier="save" unwindAction="unwindToThisViewWithSender:" id="VaL-SB-NAC"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdi-Ng-WuI">
                                 <rect key="frame" x="299" y="15" width="60" height="56"/>
@@ -807,11 +813,15 @@
                     </view>
                     <connections>
                         <outlet property="EmbedTransactionController" destination="aUF-E9-Ic6" id="wie-a9-VFe"/>
+                        <outlet property="image" destination="wdi-Ng-WuI" id="6mJ-Cq-EGU"/>
                         <outlet property="interPrice" destination="ECd-lr-UML" id="lTR-wY-Ren"/>
+                        <outlet property="payedBy" destination="tk1-3t-TMc" id="khb-Vj-aw0"/>
                         <outlet property="textTitle" destination="CYe-FE-mz3" id="4zp-WB-hhd"/>
+                        <outlet property="transactionDate" destination="z64-LC-b8e" id="PuE-FQ-IB8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4H9-nD-p6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hXh-Hk-Zod" userLabel="Exit" sceneMemberID="exit"/>
                 <customObject id="aUF-E9-Ic6" customClass="TableFriends_TransactionViewController" customModule="ManageUrTrip" customModuleProvider="target">
                     <connections>
                         <outlet property="tableView" destination="egR-Sa-woF" id="ixj-Ed-0Fd"/>

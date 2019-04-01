@@ -13,7 +13,9 @@ class EmbedTransactionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textTitle: UITextField!
     
     @IBOutlet weak var interPrice: UITextField!
-    
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var transactionDate: UIDatePicker!
+    @IBOutlet weak var payedBy: UIPickerView!
     
     @IBOutlet var EmbedTransactionController: TableFriends_TransactionViewController!
     
@@ -31,7 +33,22 @@ class EmbedTransactionViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "save" { //UNWIND LINK
+            
+            
+        }
+        else if segue.identifier == "cancel"{
+                
+            
+            
+        }
+        else{
+            
+        } }
     
     // MARK: - TextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

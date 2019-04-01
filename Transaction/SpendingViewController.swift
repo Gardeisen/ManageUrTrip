@@ -36,4 +36,17 @@ class SpendingViewController: UIViewController {
         }
     }
     
+    @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
+        if(sender.identifier == "save"){ //Unwind LINK
+            // let newTravelController = sender.source as! CreateTravel_ViewController
+            //let embedTravelController = newTravelController.childViewControllers[0] as! EmbedTravelViewController
+            
+            /*let embedTravelController = sender.source as! EmbedTravelViewController
+            if let travel = embedTravelController.newTravel{
+                self.TravelTableViewController.travelSet_ViewModel.add(trav: travel)
+                CoreDataManager.save()
+            }*/
+        }
+    }
+    
 }
