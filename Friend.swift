@@ -12,7 +12,10 @@ extension Friend {
     
     public var firstname : String { return self.pFirstname ?? "" }
     
-    public var total_i_payed : Float { return self.pTotal_I_payed }
+    public var total_i_payed : Float {
+        get { return self.pTotal_I_payed }
+        set { self.pTotal_I_payed = (newValue as Float) }
+    }
     
     public var lastname : String { return self.pLastname ?? "" }
     

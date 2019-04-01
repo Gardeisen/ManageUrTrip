@@ -16,6 +16,7 @@ class CreateSpentViewController: UIViewController {
         
         if let destination = segue.destination as? EmbedTransactionViewController {
             destination.travelSelected = self.travelSelect
+            destination.isSpent = true
             print("je passe le travel au embed view")
             
         }

@@ -83,14 +83,15 @@ class TableFriends_TransactionViewController: NSObject, UITableViewDataSource, U
             fatalError("no travel found at this index")
         }
         if(self.selectedFriends.contains(f)){
-            print("removed")
+         
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
             self.selectedFriends.remove(friend: f)
         }else{
-            print("added")
+           
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
             self.selectedFriends.add(friend: f)
         }
+        
        
     }
     

@@ -30,6 +30,13 @@ class TransactionDAO {
         }
         
     }
+    
+    static func createTransaction(){
+        
+    }
+    
+    
+    
     /// number of elements
     static var count: Int{
         self.request.predicate = nil

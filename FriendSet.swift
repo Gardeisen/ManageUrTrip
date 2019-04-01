@@ -75,6 +75,7 @@ class FriendSet: Sequence {
         }
     }
     
+    
 }
 
 class ItFriendSet: IteratorProtocol{

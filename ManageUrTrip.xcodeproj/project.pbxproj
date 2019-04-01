@@ -24,6 +24,9 @@
 		4A2854C0224A6F79007EB180 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854BF224A6F79007EB180 /* CoreDataManager.swift */; };
 		4A84D7F0224A97A7001D644A /* ShowTravel_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A84D7EF224A97A7001D644A /* ShowTravel_ViewController.swift */; };
 		4A84D7F2224A97C6001D644A /* CreateTravel_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A84D7F1224A97C6001D644A /* CreateTravel_ViewController.swift */; };
+		4AC7D32D225266D4000F2517 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC7D32C225266D4000F2517 /* Debt.swift */; };
+		4AC7D32F225268B6000F2517 /* PersonalBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC7D32E225268B6000F2517 /* PersonalBalance.swift */; };
+		4AC7D331225268D9000F2517 /* PersonalBalanceDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC7D330225268D9000F2517 /* PersonalBalanceDAO.swift */; };
 		827E3356224A282600DCA34F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E3355224A282600DCA34F /* AppDelegate.swift */; };
 		827E3358224A282600DCA34F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E3357224A282600DCA34F /* ViewController.swift */; };
 		827E335B224A282600DCA34F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827E3359224A282600DCA34F /* Main.storyboard */; };
@@ -79,6 +82,9 @@
 		4A2854BF224A6F79007EB180 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		4A84D7EF224A97A7001D644A /* ShowTravel_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTravel_ViewController.swift; sourceTree = "<group>"; };
 		4A84D7F1224A97C6001D644A /* CreateTravel_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTravel_ViewController.swift; sourceTree = "<group>"; };
+		4AC7D32C225266D4000F2517 /* Debt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debt.swift; sourceTree = "<group>"; };
+		4AC7D32E225268B6000F2517 /* PersonalBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBalance.swift; sourceTree = "<group>"; };
+		4AC7D330225268D9000F2517 /* PersonalBalanceDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBalanceDAO.swift; sourceTree = "<group>"; };
 		827E3352224A282600DCA34F /* ManageUrTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageUrTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		827E3355224A282600DCA34F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		827E3357224A282600DCA34F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +242,7 @@
 				4A2854B7224A62E2007EB180 /* TravelDAO.swift */,
 				3B3A38AB224B7BA700D4C5D5 /* TransactionDAO.swift */,
 				82D26FD2224BF0CB00019B14 /* FriendDAO.swift */,
+				4AC7D330225268D9000F2517 /* PersonalBalanceDAO.swift */,
 			);
 			name = DAO;
 			path = ..;
@@ -261,6 +268,8 @@
 				3B3A38B1224B7C0B00D4C5D5 /* TransactionSet.swift */,
 				82D26FCA224BEEA800019B14 /* Friend.swift */,
 				82D26FCC224BEEDC00019B14 /* FriendSet.swift */,
+				4AC7D32C225266D4000F2517 /* Debt.swift */,
+				4AC7D32E225268B6000F2517 /* PersonalBalance.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -421,7 +430,9 @@
 				827E3358224A282600DCA34F /* ViewController.swift in Sources */,
 				82D26FD5224BF37200019B14 /* ParticipatingFriendviewController.swift in Sources */,
 				3B3A38AC224B7BA700D4C5D5 /* TransactionDAO.swift in Sources */,
+				4AC7D32D225266D4000F2517 /* Debt.swift in Sources */,
 				3B267998224E7488006F2C9E /* EditTravel_ViewController.swift in Sources */,
+				4AC7D331225268D9000F2517 /* PersonalBalanceDAO.swift in Sources */,
 				3B3A38AE224B7BD200D4C5D5 /* TransactionSetViewModel.swift in Sources */,
 				4A2854B6224A62B0007EB180 /* Travel.swift in Sources */,
 				3BEE7577224B6ECB00D2ED38 /* EmbedTravelViewController.swift in Sources */,
@@ -436,6 +447,7 @@
 				82D26FCB224BEEA800019B14 /* Friend.swift in Sources */,
 				4A2854BC224A633E007EB180 /* Travel_TableViewController.swift in Sources */,
 				E74A72BA224D0DCF0076C58C /* TableParticipantEmbedViewController.swift in Sources */,
+				4AC7D32F225268B6000F2517 /* PersonalBalance.swift in Sources */,
 				4A84D7F2224A97C6001D644A /* CreateTravel_ViewController.swift in Sources */,
 				827E3356224A282600DCA34F /* AppDelegate.swift in Sources */,
 				E7B6E088224E635E00EB6843 /* CreateSpentViewController.swift in Sources */,
