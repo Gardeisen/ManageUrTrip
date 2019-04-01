@@ -8,11 +8,13 @@
 
 import UIKit
 
-class TableFriends_TransactionViewController: NSObject, UITableViewDataSource, FriendSetViewModelDelegate {
+class TableFriends_TransactionViewController: NSObject, UITableViewDataSource, UITableViewDelegate, FriendSetViewModelDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
     var friendSetViewModel : FriendSetViewModel
+    
+    var selectedFriends : FriendSet = FriendSet(friend: [])
     
     override init() {
         self.friendSetViewModel = FriendSetViewModel()
@@ -62,19 +64,34 @@ class TableFriends_TransactionViewController: NSObject, UITableViewDataSource, F
         guard let friend = self.friendSetViewModel.get(friendAt: indexPath.row) else{
             fatalError("no travel found at this index")
         }
-        cell.textLabel?.text = " \(friend.firstname) "
-        
+        cell.textLabel?.text = " \(friend.fullname) "
+        //tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+       
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
         
-        
-        //let alertHelper = AlertHelper()
-        //alertHelper.alert(title: "", message: "")
         if(editingStyle == UITableViewCell.EditingStyle.delete){
             self.friendSetViewModel.delete(friendAt: indexPath.row)
         }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let f = self.friendSetViewModel.get(friendAt: indexPath.row) else{
+            fatalError("no travel found at this index")
+        }
+        if(self.selectedFriends.contains(f)){
+            print("removed")
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+            self.selectedFriends.remove(friend: f)
+        }else{
+            print("added")
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+            self.selectedFriends.add(friend: f)
+        }
+       
+    }
+    
 }
