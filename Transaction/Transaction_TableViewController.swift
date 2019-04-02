@@ -37,7 +37,9 @@ class Transaction_TableViewController: NSObject, UITableViewDataSource, UITableV
         guard let transaction = self.transactionSet_ViewModel.get(transactionAt: indexPath.row) else{
             fatalError("no travel found at this index")
         }
-        cell.textLabel?.text = " \(transaction.name) "
+        cell.textLabel?.text = " \(transaction.name)     \(transaction.t_price)€"
+        cell.detailTextLabel?.text = " Payed by: \(transaction.isPayedBy?.fullname ?? "")"
+        cell.imageView?.image = UIImage(named: "beach")
         return cell
     }
     

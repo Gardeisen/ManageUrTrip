@@ -32,7 +32,6 @@ class SpendingViewController: UIViewController {
             
             if let destination = segue.destination as? CreateSpentViewController {
                 destination.travelSelect = self.travelSelected
-                print("je passe le travel au embed view")
                 
             }
             

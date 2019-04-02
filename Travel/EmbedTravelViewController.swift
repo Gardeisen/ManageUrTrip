@@ -23,9 +23,9 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
         
             if let travelToUpdate = self.newTravel{
                 self.title_field.text = travelToUpdate.title
-                print("ok")
+               
             }
-        print("non ok")
+       
     }
     // preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,7 +38,7 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
             for f in participants {
                 f.participates = self.newTravel
             }
-            print("saaaaave")
+           
         }
         else if segue.identifier == "cancel"{
             if let traveltoCancel = self.newTravel{
