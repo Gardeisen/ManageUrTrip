@@ -71,9 +71,13 @@ UIPickerViewDataSource{
             print(priceForEach)
             
             for pers in self.EmbedTransactionController.selectedFriends{
-                print(pers.fullname)
-                debt = Debt(price: priceForEach, friend: pers, transaction: t)
-                PersonalBalanceDAO.updatePersonalBalances(payer: self.payedBy_friend!, other: pers, value: priceForEach)
+                if(pers != self.payedBy_friend!){
+                    debt = Debt(price: priceForEach, friend: pers, transaction: t)
+                    PersonalBalanceDAO.updatePersonalBalances(payer: self.payedBy_friend!, other: pers, value: priceForEach)
+                }else{
+                    self.payedBy_friend!.total_costs = self.payedBy_friend!.total_costs  + priceForEach
+                }
+                
             }
             CoreDataManager.save()
             
