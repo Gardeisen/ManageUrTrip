@@ -11,12 +11,12 @@ import UIKit
 class Transaction_TableViewController: NSObject, UITableViewDataSource, TransactionSetViewModelDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    var tarnsactionSet_ViewModel : TransactionSetViewModel
+    var transactionSet_ViewModel : TransactionSetViewModel
     
     override init() {
-        self.tarnsactionSet_ViewModel = TransactionSetViewModel()
+        self.transactionSet_ViewModel = TransactionSetViewModel()
         super.init()
-        self.tarnsactionSet_ViewModel.delegate=self
+        self.transactionSet_ViewModel.delegate=self
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,14 +27,14 @@ class Transaction_TableViewController: NSObject, UITableViewDataSource, Transact
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //permet de choisir le nombre de lignes
-        return self.tarnsactionSet_ViewModel.count
+        return self.transactionSet_ViewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // indexPath = position de la cellule dans tableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellSpending", for: indexPath)
-        guard let transaction = self.tarnsactionSet_ViewModel.get(transactionAt: indexPath.row) else{
+        guard let transaction = self.transactionSet_ViewModel.get(transactionAt: indexPath.row) else{
             fatalError("no travel found at this index")
         }
         cell.textLabel?.text = " \(transaction.name) "

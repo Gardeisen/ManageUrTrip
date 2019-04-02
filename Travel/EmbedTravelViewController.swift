@@ -38,7 +38,7 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
             for f in participants {
                 f.participates = self.newTravel
             }
-            
+            print("saaaaave")
         }
         else if segue.identifier == "cancel"{
             if let traveltoCancel = self.newTravel{

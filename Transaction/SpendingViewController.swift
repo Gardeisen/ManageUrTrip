@@ -16,6 +16,9 @@ class SpendingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if let atravel = self.travelSelected {
+            self.TransactionTableViewController.transactionSet_ViewModel = TransactionSetViewModel(travel: atravel)            
+        }
     }
     
     override func didReceiveMemoryWarning() {

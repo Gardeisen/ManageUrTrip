@@ -44,18 +44,18 @@ class TransactionSetViewModel  {
     var delegate : TransactionSetViewModelDelegate? = nil
     
     init() {
-        if let data = TransactionDAO.fetchAll(){
-            self.modelset = TransactionSet(transaction: data)
-            for p in self.modelset{
-                self.dataset.append(p)
-            }
-        }
-        else{
-            self.modelset = TransactionSet()
+        self.modelset = TransactionSet()
+    }
+    
+    init(travel : Travel) {
+        let data = TransactionDAO.fetchAllTransactionOfTravel(travel: travel)
+        self.modelset = TransactionSet(transaction: data)
+        for p in self.modelset{
+            self.dataset.append(p)
         }
     }
-    convenience init(delegate : TransactionSetViewModelDelegate) {
-        self.init()
+    convenience init(delegate : TransactionSetViewModelDelegate, travel : Travel) {
+        self.init(travel: travel)
         self.delegate = delegate
         
     }

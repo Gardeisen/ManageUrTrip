@@ -31,6 +31,26 @@ class TransactionDAO {
         
     }
     
+    static func fetchAllTransactionOfTravel(travel : Travel) -> [Transaction]{
+        var travelTransaction: [Transaction] = []
+        
+        if let _fiendsOfTravel = TravelDAO.getFriendOfATravel(travel: travel){
+            
+            for f in _fiendsOfTravel.allObjects as! [Friend]{
+                
+                if let _transactionsOfFriend = f.payes{
+                    
+                     for t in _transactionsOfFriend.allObjects as! [Transaction]{
+                        
+                        travelTransaction.append(t)
+                    }
+                }
+            }
+        }
+        return travelTransaction
+        
+    }
+    
     static func creationTransactionUpdates(payedBy_friend: Friend, t: Transaction, selectedFriends : FriendSet, priceForEach : Float ){
         //the transaction
         t.isPayedBy = payedBy_friend
