@@ -28,6 +28,8 @@
 		4AC7D32F225268B6000F2517 /* PersonalBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC7D32E225268B6000F2517 /* PersonalBalance.swift */; };
 		4AC7D331225268D9000F2517 /* PersonalBalanceDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC7D330225268D9000F2517 /* PersonalBalanceDAO.swift */; };
 		82459993225368E300D4A552 /* PersonalBalanceSet_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82459992225368E300D4A552 /* PersonalBalanceSet_ViewModel.swift */; };
+		8255729E2253C3C500D1E4F5 /* TableofBalance_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8255729D2253C3C500D1E4F5 /* TableofBalance_ViewController.swift */; };
+		825572A02253C40100D1E4F5 /* Balance_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8255729F2253C40100D1E4F5 /* Balance_ViewController.swift */; };
 		827E3356224A282600DCA34F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E3355224A282600DCA34F /* AppDelegate.swift */; };
 		827E3358224A282600DCA34F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E3357224A282600DCA34F /* ViewController.swift */; };
 		827E335B224A282600DCA34F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827E3359224A282600DCA34F /* Main.storyboard */; };
@@ -91,6 +93,8 @@
 		4AC7D32E225268B6000F2517 /* PersonalBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBalance.swift; sourceTree = "<group>"; };
 		4AC7D330225268D9000F2517 /* PersonalBalanceDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBalanceDAO.swift; sourceTree = "<group>"; };
 		82459992225368E300D4A552 /* PersonalBalanceSet_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBalanceSet_ViewModel.swift; sourceTree = "<group>"; };
+		8255729D2253C3C500D1E4F5 /* TableofBalance_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableofBalance_ViewController.swift; sourceTree = "<group>"; };
+		8255729F2253C40100D1E4F5 /* Balance_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance_ViewController.swift; sourceTree = "<group>"; };
 		827E3352224A282600DCA34F /* ManageUrTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageUrTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		827E3355224A282600DCA34F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		827E3357224A282600DCA34F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				828DE65122535DAA00C1A942 /* TablePersonalBalance_ViewController.swift */,
+				8255729D2253C3C500D1E4F5 /* TableofBalance_ViewController.swift */,
+				8255729F2253C40100D1E4F5 /* Balance_ViewController.swift */,
 			);
 			path = Sum_Up;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 				TargetAttributes = {
 					827E3351224A282600DCA34F = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					827E3368224A282600DCA34F = {
@@ -444,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				828DE65222535DAA00C1A942 /* TablePersonalBalance_ViewController.swift in Sources */,
+				8255729E2253C3C500D1E4F5 /* TableofBalance_ViewController.swift in Sources */,
 				82D26FD7224BF41600019B14 /* TableParticipatingController.swift in Sources */,
 				82459993225368E300D4A552 /* PersonalBalanceSet_ViewModel.swift in Sources */,
 				4A2854B8224A62E2007EB180 /* TravelDAO.swift in Sources */,
@@ -477,6 +485,7 @@
 				E74A72BA224D0DCF0076C58C /* TableParticipantEmbedViewController.swift in Sources */,
 				4AC7D32F225268B6000F2517 /* PersonalBalance.swift in Sources */,
 				4A84D7F2224A97C6001D644A /* CreateTravel_ViewController.swift in Sources */,
+				825572A02253C40100D1E4F5 /* Balance_ViewController.swift in Sources */,
 				827E3356224A282600DCA34F /* AppDelegate.swift in Sources */,
 				E7B6E088224E635E00EB6843 /* CreateSpentViewController.swift in Sources */,
 				3B3A38B6224B819500D4C5D5 /* SpendingViewController.swift in Sources */,
@@ -634,10 +643,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ManageUrTrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Marine-Ines.ManageUrTrip";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -646,6 +657,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ManageUrTrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Marine-Ines.ManageUrTrip";

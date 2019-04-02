@@ -53,6 +53,14 @@ class PersonalBalanceSetViewModel {
             self.dataset.append(p)
         }
     }
+    
+    init(travel : Travel){
+        let data = PersonalBalanceDAO.fetchAllBalance(travel: travel)
+        self.modelset = PersonalBalanceSet(balance: data)
+        for p in self.modelset{
+            self.dataset.append(p)
+        }
+    }
     convenience init(delegate : PersonalBalanceSetViewModelDelegate) {
         self.init()
         self.delegate = delegate

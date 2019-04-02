@@ -46,7 +46,13 @@ class ShowTravel_ViewController: UIViewController {
             
             if let destination = segue.destination as? SpendingViewController {
                 destination.travelSelected = self.travelSelected
-                print("je passe le Travel au spending view controller")
+            }
+            
+        }
+        if (segue.identifier == "showBalance") {
+            
+            if let destination = segue.destination as? Balance_ViewController {
+                destination.travelSelected = self.travelSelected
             }
             
         }

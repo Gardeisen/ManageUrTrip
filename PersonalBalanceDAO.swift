@@ -40,12 +40,10 @@ class PersonalBalanceDAO {
         let payerBalance : [PersonalBalance]? = getPersonalBalance(owner: payer, fn: other.fullname)
         
         if(payerBalance!.count == 0){
-            print("je cree balance owner")
             let pB : PersonalBalance = PersonalBalance(fullname: other.fullname, value: value)
             pB.isLinkedTo = payer
         }else{
             payerBalance![0].pValue = payerBalance![0].pValue + value
-            print("maj balance owner")
         }
         
         let otherBalance :  [PersonalBalance]? = getPersonalBalance(owner: other,fn: payer.fullname)
@@ -70,6 +68,31 @@ class PersonalBalanceDAO {
         }
         
         return persoBalance
+    }
+    
+    static func fetchAllBalance(travel : Travel) -> [PersonalBalance]{
+        
+        var Balance: [PersonalBalance] = []
+        
+        if let _fiendsOfTravel = TravelDAO.getFriendOfATravel(travel: travel){
+            
+            for f in _fiendsOfTravel.allObjects as! [Friend]{
+                
+                var tab : [PersonalBalance] = []
+                tab = PersonalBalanceDAO.fetchAllBalanceOfFriend(friend: f)
+                for i in tab {
+                    if i.value < 0 {
+                        Balance.append(i)
+                    }
+                }
+                
+            }
+            
+          return Balance
+        }
+        else {
+            return Balance
+        }
     }
     
     static func delete(balance : PersonalBalance){
