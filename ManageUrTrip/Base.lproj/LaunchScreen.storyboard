@@ -21,18 +21,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="NOUNOUILLE &amp; PETIT BOUCHON" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OI6-RI-rpf">
-                                <rect key="frame" x="30" y="220" width="315" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MANAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwx-et-I8R">
+                                <rect key="frame" x="114.5" y="248" width="146" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhf-ca-CCb">
+                                <rect key="frame" x="161" y="310" width="53" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVN-Nw-gfd">
+                                <rect key="frame" x="150" y="388" width="75" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.39879484133220411" blue="0.60672453379242375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.86128050088882446" blue="0.90989774465560913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OI6-RI-rpf" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="200" id="1uB-em-GjX"/>
-                            <constraint firstItem="OI6-RI-rpf" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="30" id="Gy5-xJ-ykt"/>
-                            <constraint firstAttribute="trailing" secondItem="OI6-RI-rpf" secondAttribute="trailing" constant="30" id="W44-Yq-k3I"/>
+                            <constraint firstItem="IVN-Nw-gfd" firstAttribute="top" secondItem="Zhf-ca-CCb" secondAttribute="bottom" constant="20" id="Ae5-PE-Wza"/>
+                            <constraint firstItem="hwx-et-I8R" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DJ8-Ll-pWI"/>
+                            <constraint firstItem="hwx-et-I8R" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="228" id="GqQ-Em-R8f"/>
+                            <constraint firstItem="Zhf-ca-CCb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HMp-Ju-6rR"/>
+                            <constraint firstItem="Zhf-ca-CCb" firstAttribute="top" secondItem="hwx-et-I8R" secondAttribute="bottom" constant="20" id="RIV-7q-sw8"/>
+                            <constraint firstItem="IVN-Nw-gfd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="di8-h9-SVM"/>
                         </constraints>
                     </view>
                 </viewController>
