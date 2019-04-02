@@ -30,6 +30,8 @@
 		82459993225368E300D4A552 /* PersonalBalanceSet_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82459992225368E300D4A552 /* PersonalBalanceSet_ViewModel.swift */; };
 		8255729E2253C3C500D1E4F5 /* TableofBalance_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8255729D2253C3C500D1E4F5 /* TableofBalance_ViewController.swift */; };
 		825572A02253C40100D1E4F5 /* Balance_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8255729F2253C40100D1E4F5 /* Balance_ViewController.swift */; };
+		825572A22253D00100D1E4F5 /* DetailsBalance_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825572A12253D00100D1E4F5 /* DetailsBalance_ViewController.swift */; };
+		825572A42253D06500D1E4F5 /* TableDetailBalance_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825572A32253D06500D1E4F5 /* TableDetailBalance_ViewController.swift */; };
 		827E3356224A282600DCA34F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E3355224A282600DCA34F /* AppDelegate.swift */; };
 		827E3358224A282600DCA34F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E3357224A282600DCA34F /* ViewController.swift */; };
 		827E335B224A282600DCA34F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827E3359224A282600DCA34F /* Main.storyboard */; };
@@ -95,6 +97,8 @@
 		82459992225368E300D4A552 /* PersonalBalanceSet_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBalanceSet_ViewModel.swift; sourceTree = "<group>"; };
 		8255729D2253C3C500D1E4F5 /* TableofBalance_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableofBalance_ViewController.swift; sourceTree = "<group>"; };
 		8255729F2253C40100D1E4F5 /* Balance_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance_ViewController.swift; sourceTree = "<group>"; };
+		825572A12253D00100D1E4F5 /* DetailsBalance_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBalance_ViewController.swift; sourceTree = "<group>"; };
+		825572A32253D06500D1E4F5 /* TableDetailBalance_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDetailBalance_ViewController.swift; sourceTree = "<group>"; };
 		827E3352224A282600DCA34F /* ManageUrTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageUrTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		827E3355224A282600DCA34F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		827E3357224A282600DCA34F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -311,6 +315,8 @@
 				828DE65122535DAA00C1A942 /* TablePersonalBalance_ViewController.swift */,
 				8255729D2253C3C500D1E4F5 /* TableofBalance_ViewController.swift */,
 				8255729F2253C40100D1E4F5 /* Balance_ViewController.swift */,
+				825572A12253D00100D1E4F5 /* DetailsBalance_ViewController.swift */,
+				825572A32253D06500D1E4F5 /* TableDetailBalance_ViewController.swift */,
 			);
 			path = Sum_Up;
 			sourceTree = "<group>";
@@ -488,8 +494,10 @@
 				825572A02253C40100D1E4F5 /* Balance_ViewController.swift in Sources */,
 				827E3356224A282600DCA34F /* AppDelegate.swift in Sources */,
 				E7B6E088224E635E00EB6843 /* CreateSpentViewController.swift in Sources */,
+				825572A22253D00100D1E4F5 /* DetailsBalance_ViewController.swift in Sources */,
 				3B3A38B6224B819500D4C5D5 /* SpendingViewController.swift in Sources */,
 				3B3A38B0224B7BEB00D4C5D5 /* Transaction.swift in Sources */,
+				825572A42253D06500D1E4F5 /* TableDetailBalance_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

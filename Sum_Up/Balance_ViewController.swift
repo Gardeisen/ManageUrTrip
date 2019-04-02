@@ -23,4 +23,15 @@ class Balance_ViewController: UIViewController {
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "detailsOfBalance") {
+            
+            if let destination = segue.destination as? DetailsBalance_ViewController {
+                destination.travelSelected = self.travelSelected
+                
+            }
+            
+        }
+}
 }
