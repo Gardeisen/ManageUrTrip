@@ -32,4 +32,25 @@ class ParticipatingFriendviewController: UIViewController {
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "showDetailsFriend"){
+            
+            if let destination = segue.destination as? DetailsFriendsController {
+                if let cell = sender as? UITableViewCell{
+                    
+                    guard let indexPath = self.ParticipantsViewController.tableView.indexPath(for: cell) else{
+                        return
+                    }
+                    
+                    guard let friend = self.ParticipantsViewController.friendSet_ViewModel.get(friendAt: indexPath.row) else{
+                        fatalError("no friend found at this index")
+                    }
+                    destination.friendSelected = friend
+                    //self.TravelTableViewController.mainVC = nil
+                }
+            }
+            
+        }
+    }
 }

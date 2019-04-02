@@ -41,6 +41,7 @@
 		82D26FD3224BF0CB00019B14 /* FriendDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D26FD2224BF0CB00019B14 /* FriendDAO.swift */; };
 		82D26FD5224BF37200019B14 /* ParticipatingFriendviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D26FD4224BF37200019B14 /* ParticipatingFriendviewController.swift */; };
 		82D26FD7224BF41600019B14 /* TableParticipatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D26FD6224BF41600019B14 /* TableParticipatingController.swift */; };
+		82FE07652253423D00E1D709 /* DetailsFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FE07642253423D00E1D709 /* DetailsFriendsController.swift */; };
 		E74A72BA224D0DCF0076C58C /* TableParticipantEmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */; };
 		E7B6E088224E635E00EB6843 /* CreateSpentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6E087224E635E00EB6843 /* CreateSpentViewController.swift */; };
 		E7B6E08A224E638B00EB6843 /* EmbedTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6E089224E638B00EB6843 /* EmbedTransactionViewController.swift */; };
@@ -105,6 +106,7 @@
 		82D26FD2224BF0CB00019B14 /* FriendDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDAO.swift; sourceTree = "<group>"; };
 		82D26FD4224BF37200019B14 /* ParticipatingFriendviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipatingFriendviewController.swift; sourceTree = "<group>"; };
 		82D26FD6224BF41600019B14 /* TableParticipatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableParticipatingController.swift; sourceTree = "<group>"; };
+		82FE07642253423D00E1D709 /* DetailsFriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFriendsController.swift; sourceTree = "<group>"; };
 		E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableParticipantEmbedViewController.swift; sourceTree = "<group>"; };
 		E7B6E087224E635E00EB6843 /* CreateSpentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSpentViewController.swift; sourceTree = "<group>"; };
 		E7B6E089224E638B00EB6843 /* EmbedTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedTransactionViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				82D26FD4224BF37200019B14 /* ParticipatingFriendviewController.swift */,
 				82D26FD6224BF41600019B14 /* TableParticipatingController.swift */,
 				E74A72B9224D0DCF0076C58C /* TableParticipantEmbedViewController.swift */,
+				82FE07642253423D00E1D709 /* DetailsFriendsController.swift */,
 			);
 			path = Participant;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				3B3A38AC224B7BA700D4C5D5 /* TransactionDAO.swift in Sources */,
 				4AC7D32D225266D4000F2517 /* Debt.swift in Sources */,
 				3B267998224E7488006F2C9E /* EditTravel_ViewController.swift in Sources */,
+				82FE07652253423D00E1D709 /* DetailsFriendsController.swift in Sources */,
 				4AC7D331225268D9000F2517 /* PersonalBalanceDAO.swift in Sources */,
 				3B3A38AE224B7BD200D4C5D5 /* TransactionSetViewModel.swift in Sources */,
 				4A2854B6224A62B0007EB180 /* Travel.swift in Sources */,
