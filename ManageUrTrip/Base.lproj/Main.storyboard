@@ -131,6 +131,7 @@
                         <outlet property="fullname" destination="SJ6-Tb-LUl" id="uQP-v0-Ea0"/>
                         <outlet property="priceBalance" destination="Z52-Jm-CUS" id="TWd-E2-CH0"/>
                         <outlet property="tableBalance" destination="Inr-P5-3zF" id="KWF-b7-9eg"/>
+                        <outlet property="tablePersoBalance" destination="DAr-4i-puY" id="oWZ-wa-XfY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhW-JA-qxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -51,13 +51,11 @@ class PersonalBalanceDAO {
         let otherBalance :  [PersonalBalance]? = getPersonalBalance(owner: other,fn: payer.fullname)
 
         if(otherBalance!.count == 0){
-            print("je cree balance other")
             let pB : PersonalBalance = PersonalBalance(fullname: payer.fullname, value: -value)
             pB.isLinkedTo = other
             
         }else{
             otherBalance![0].pValue = otherBalance![0].pValue - value
-            print("maj balance other")
         }
         
     }

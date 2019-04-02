@@ -15,12 +15,15 @@ class DetailsFriendsController: UIViewController {
     @IBOutlet weak var fullname: UILabel!
     @IBOutlet weak var priceBalance: UILabel!
     
-    var tablePersoBalance : TablePersonalBalance_ViewController!
+    
+    @IBOutlet var tablePersoBalance: TablePersonalBalance_ViewController!
+    
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         if let afriend = self.friendSelected {
+            
             self.fullname.text = afriend.fullname
             let balance = (afriend.pTotal_I_payed) - (afriend.pTotalCosts)
             
@@ -33,14 +36,12 @@ class DetailsFriendsController: UIViewController {
                 self.priceBalance.text = " \(balance)"
                 self.priceBalance.backgroundColor = UIColor.red
             }
-            
-        } else {
+            self.tablePersoBalance.balancePersonalSet_ViewModel = PersonalBalanceSetViewModel(friend : afriend)
+        }
+        else {
             self.fullname.text = ""
         }
-        if let aFriend = self.friendSelected {
-            //self.tablePersoBalance.balancePersonalSet_ViewModel = PersonalBalanceSetViewModel(friend : aFriend)
-        }
-        
+    
         
     }
     
