@@ -26,6 +26,7 @@ UIPickerViewDataSource{
     
     var pickerData : [Friend] = []
     
+    var newTransaction : Transaction?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,8 +68,10 @@ UIPickerViewDataSource{
             let priceForEach = p / Float(self.EmbedTransactionController.selectedFriends.count())
 
             //creation of the transaction
-            let t = Transaction(name: self.textTitle.text!, total_price: p, spent: self.isSpent!)
-            TransactionDAO.creationTransactionUpdates(payedBy_friend: self.payedBy_friend!, t: t, selectedFriends : self.EmbedTransactionController.selectedFriends, priceForEach : priceForEach )
+            self.newTransaction = Transaction(name: self.textTitle.text!, total_price: p, spent: self.isSpent!)
+            TransactionDAO.creationTransactionUpdates(payedBy_friend: self.payedBy_friend!, t: self.newTransaction!, selectedFriends : self.EmbedTransactionController.selectedFriends, priceForEach : priceForEach )
+            
+
             
             
         }

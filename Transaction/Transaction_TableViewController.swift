@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Transaction_TableViewController: NSObject, UITableViewDataSource, TransactionSetViewModelDelegate {
+class Transaction_TableViewController: NSObject, UITableViewDataSource, UITableViewDelegate, TransactionSetViewModelDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var transactionSet_ViewModel : TransactionSetViewModel
@@ -55,7 +55,6 @@ class Transaction_TableViewController: NSObject, UITableViewDataSource, Transact
     }
     
     func transactionAdded(at indexPath: IndexPath) {
-        print("//////////////tansactionAdded")
         self.tableView.beginUpdates()
         self.tableView.insertRows(at: [indexPath], with: UITableViewRowAnimation.middle)
         self.tableView.endUpdates()

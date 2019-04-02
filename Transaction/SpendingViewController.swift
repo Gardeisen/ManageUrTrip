@@ -17,7 +17,7 @@ class SpendingViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if let atravel = self.travelSelected {
-            self.TransactionTableViewController.transactionSet_ViewModel = TransactionSetViewModel(travel: atravel)            
+            self.TransactionTableViewController.transactionSet_ViewModel = TransactionSetViewModel(delegate: self.TransactionTableViewController, travel: atravel)
         }
     }
     
@@ -41,14 +41,11 @@ class SpendingViewController: UIViewController {
     
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
         if(sender.identifier == "save"){ //Unwind LINK
-            // let newTravelController = sender.source as! CreateTravel_ViewController
-            //let embedTravelController = newTravelController.childViewControllers[0] as! EmbedTravelViewController
-            
-            /*let embedTravelController = sender.source as! EmbedTravelViewController
-            if let travel = embedTravelController.newTravel{
-                self.TravelTableViewController.travelSet_ViewModel.add(trav: travel)
+            let embedTravelController = sender.source as! EmbedTransactionViewController
+            if let transaction = embedTravelController.newTransaction{
+                self.TransactionTableViewController.transactionSet_ViewModel.add(tran: transaction)
                 CoreDataManager.save()
-            }*/
+            }
         }
     }
     

@@ -65,11 +65,11 @@ class TransactionSetViewModel  {
     ///
     /// - Parameter transaction: Transaction to be added
     public func add(tran: Transaction){
+      
         if self.modelset.indexOf(t: tran) == -1{
             self.modelset.add(transaction: tran)
             self.dataset.append(tran)
             self.delegate?.transactionAdded(at: IndexPath(row:self.modelset.count() - 1,section:0))
-            print(self.modelset.count() - 1)
         }}
     
     /// numbers of transaction
