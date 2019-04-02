@@ -8,10 +8,17 @@
 
 import UIKit
 
-class TablePersonalBalance_ViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
-   
+class TablePersonalBalance_ViewController: NSObject, UITableViewDataSource, PersonalBalanceSetViewModelDelegate {
     
+   
     @IBOutlet weak var tableView: UITableView!
+    var balancePersonalSet_ViewModel : PersonalBalanceSetViewModel
+    
+    override init() {
+        self.balancePersonalSet_ViewModel = PersonalBalanceSetViewModel()
+        super.init()
+        
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -33,5 +40,22 @@ class TablePersonalBalance_ViewController: NSObject, UITableViewDataSource, UITa
         
         
     }
+    
+    func dataSetChanged() {
+        
+    }
+    
+    func personalBalanceDeleted(at indexPath: IndexPath) {
+        
+    }
+    
+    func personalBalanceUpdated(at indexPath: IndexPath) {
+        
+    }
+    
+    func personalBalanceAdded(at indexPath: IndexPath) {
+        
+    }
+    
 
 }

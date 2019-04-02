@@ -61,5 +61,8 @@ class PersonalBalanceDAO {
         }
         
     }
+    static func delete(balance : PersonalBalance){
+        CoreDataManager.context.delete(balance)
+    }
 
 }

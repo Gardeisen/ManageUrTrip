@@ -15,6 +15,7 @@ class DetailsFriendsController: UIViewController {
     @IBOutlet weak var fullname: UILabel!
     @IBOutlet weak var priceBalance: UILabel!
     
+    var tablePersoBalance : TablePersonalBalance_ViewController!
     
     override func viewDidLoad() {
         
