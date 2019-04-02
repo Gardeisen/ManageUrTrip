@@ -18,7 +18,7 @@ extension Friend {
     }
     
     public var total_costs : Float {
-        get { return self.pTotalCosts}
+        get { return (self.pTotalCosts)}
         set { self.pTotalCosts = (newValue as Float) }
     }
     
