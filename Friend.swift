@@ -17,6 +17,11 @@ extension Friend {
         set { self.pTotal_I_payed = (newValue as Float) }
     }
     
+    public var total_costs : Float {
+        get { return self.pTotalCosts}
+        set { self.pTotalCosts = (newValue as Float) }
+    }
+    
     public var lastname : String { return self.pLastname ?? "" }
     
     public var fullname : String { return "\(self.firstname) \(self.lastname)" }

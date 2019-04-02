@@ -38,7 +38,6 @@ class PersonalBalanceDAO {
     
     static func updatePersonalBalances( payer : Friend, other : Friend, value : Float){
         let payerBalance : [PersonalBalance]? = getPersonalBalance(owner: payer, fn: other.fullname)
-        let otherBalance :  [PersonalBalance]? = getPersonalBalance(owner: other,fn: payer.fullname)
         
         if(payerBalance!.count == 0){
             print("je cree balance owner")
@@ -49,13 +48,15 @@ class PersonalBalanceDAO {
             print("maj balance owner")
         }
         
+        let otherBalance :  [PersonalBalance]? = getPersonalBalance(owner: other,fn: payer.fullname)
+
         if(otherBalance!.count == 0){
             print("je cree balance other")
             let pB : PersonalBalance = PersonalBalance(fullname: payer.fullname, value: -value)
             pB.isLinkedTo = other
             
         }else{
-            payerBalance![0].pValue = payerBalance![0].pValue - value
+            otherBalance![0].pValue = otherBalance![0].pValue - value
             print("maj balance other")
         }
         

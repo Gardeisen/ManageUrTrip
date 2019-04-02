@@ -210,8 +210,8 @@
 				827E3355224A282600DCA34F /* AppDelegate.swift */,
 				827E3359224A282600DCA34F /* Main.storyboard */,
 				827E335F224A282600DCA34F /* Assets.xcassets */,
-				827E3361224A282600DCA34F /* LaunchScreen.storyboard */,
 				827E3364224A282600DCA34F /* Info.plist */,
+				827E3361224A282600DCA34F /* LaunchScreen.storyboard */,
 				827E335C224A282600DCA34F /* ManageUrTrip.xcdatamodeld */,
 				4A2854BF224A6F79007EB180 /* CoreDataManager.swift */,
 			);

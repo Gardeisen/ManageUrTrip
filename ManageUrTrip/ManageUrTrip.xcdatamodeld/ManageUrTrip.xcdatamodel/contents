@@ -11,6 +11,7 @@
         <attribute name="pFirstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pLastname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pTotal_I_payed" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pTotalCosts" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="hasAdebt" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PersonalBalance" inverseName="isLinkedTo" inverseEntity="PersonalBalance" syncable="YES"/>
         <relationship name="participates" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Travel" inverseName="isComposedBy" inverseEntity="Travel" syncable="YES"/>
         <relationship name="payes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="isPayedBy" inverseEntity="Transaction" syncable="YES"/>
@@ -39,7 +40,7 @@
     </entity>
     <elements>
         <element name="Debt" positionX="162" positionY="216" width="128" height="90"/>
-        <element name="Friend" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="Friend" positionX="-63" positionY="-18" width="128" height="193"/>
         <element name="PersonalBalance" positionX="-18" positionY="351" width="128" height="88"/>
         <element name="Transaction" positionX="322" positionY="12" width="128" height="148"/>
         <element name="Travel" positionX="124" positionY="-126" width="128" height="118"/>
