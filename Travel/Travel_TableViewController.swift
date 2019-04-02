@@ -46,8 +46,14 @@ class Travel_TableViewController: NSObject, UITableViewDelegate, UITableViewData
             fatalError("no travel found at this index")
         }
         cell.textLabel?.text = " \(travel.title) "
-        cell.detailTextLabel?.text = " voici un sous titre"
+        cell.textLabel?.textColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
         cell.imageView?.image = UIImage(named: "beach")
+        //handle date
+        let format = DateFormatter()
+        format.dateFormat = "dd/MM/yyyy"
+        cell.detailTextLabel?.text = format.string(from: travel.beginning ?? Date())
+        
+        
         return cell
     }
     

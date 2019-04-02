@@ -19,6 +19,7 @@ extension Travel{
 
     public var beginning : Date? {
         get{ return (self.pBeginning as Date?) }
+        set{ self.pBeginning = (newValue as NSDate?) }
     }
     
     convenience init(t : String){

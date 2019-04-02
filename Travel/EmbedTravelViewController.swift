@@ -38,6 +38,9 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
             for f in participants {
                 f.participates = self.newTravel
             }
+            
+            newTravel?.beginning = self.startDate.date
+            
            
         }
         else if segue.identifier == "cancel"{
