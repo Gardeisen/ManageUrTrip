@@ -47,10 +47,8 @@ UIPickerViewDataSource{
         
         if let t = self.travelSelected {
             self.EmbedTransactionController.friendSetViewModel = FriendSetViewModel(travel : t)
-            print("on initialise bien le controller avec le voyage")
         }
         else {
-            print("on initialise pas le controller")
         }
     }
 
@@ -68,7 +66,7 @@ UIPickerViewDataSource{
             let priceForEach = p / Float(self.EmbedTransactionController.selectedFriends.count())
 
             //creation of the transaction
-            self.newTransaction = Transaction(name: self.textTitle.text!, total_price: p, spent: self.isSpent!)
+            self.newTransaction = Transaction(name: self.textTitle.text!, total_price: p, spent: self.isSpent!, transactionDate: transactionDate.date)
             TransactionDAO.creationTransactionUpdates(payedBy_friend: self.payedBy_friend!, t: self.newTransaction!, selectedFriends : self.EmbedTransactionController.selectedFriends, priceForEach : priceForEach )
             
 

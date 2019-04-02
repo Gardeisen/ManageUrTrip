@@ -77,9 +77,6 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
         alert.addTextField { (lastname) in
             lastname.placeholder = "Enter lastname"
         }
-        alert.addTextField { (start) in
-            start.placeholder = "Enter arrival date"
-        }
         
         let saveAction = UIAlertAction(title: "SAVE", style: .default) {
             

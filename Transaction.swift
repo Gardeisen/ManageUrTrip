@@ -22,10 +22,11 @@ extension Transaction {
     public var t_price : Float { return self.pPrice}
     
     
-    convenience init(name : String, total_price : Float, spent : Bool){
+    convenience init(name : String, total_price : Float, spent : Bool, transactionDate: Date?){
         self.init(context: CoreDataManager.context)
         self.pName = name
         self.pPrice = total_price
         self.isSpent = spent
+        self.date = transactionDate
     }
 }

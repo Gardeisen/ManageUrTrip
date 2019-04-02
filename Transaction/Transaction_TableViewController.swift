@@ -39,8 +39,17 @@ class Transaction_TableViewController: NSObject, UITableViewDataSource, UITableV
         }
         cell.textLabel?.text = " \(transaction.name)     \(transaction.t_price)€"
         cell.textLabel?.textColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-        cell.detailTextLabel?.text = " Payed by: \(transaction.isPayedBy?.fullname ?? "")"
         cell.imageView?.image = UIImage(named: "coins")
+        
+        
+        
+        //handle date
+        let format = DateFormatter()
+        format.dateFormat = "dd/MM/yyyy"
+        let stringDate = format.string(from: transaction.date ?? Date())
+        
+        cell.detailTextLabel?.text = " Payed by: \(transaction.isPayedBy?.fullname ?? "") --  \(stringDate)"
+
         return cell
     }
     
