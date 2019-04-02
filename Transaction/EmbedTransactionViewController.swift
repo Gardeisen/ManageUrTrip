@@ -59,29 +59,16 @@ UIPickerViewDataSource{
         
         if segue.identifier == "save" { //UNWIND LINK
             
-            print("ok enter")
-            var debt : Debt
-            
+            // retrieve the total price and update the payer
             let p : Float = (self.interPrice.text! as NSString).floatValue
             self.payedBy_friend!.total_i_payed = self.payedBy_friend!.total_i_payed  + p
             
-            let t = Transaction(name: self.textTitle.text!, total_price: p, spent: self.isSpent!)
-            t.isPayedBy = payedBy_friend
-            
+            //the price for each
             let priceForEach = p / Float(self.EmbedTransactionController.selectedFriends.count())
-            print(self.EmbedTransactionController.selectedFriends.count())
-            print(priceForEach)
-            
-            for pers in self.EmbedTransactionController.selectedFriends{
-                if(pers != self.payedBy_friend!){
-                    debt = Debt(price: priceForEach, friend: pers, transaction: t)
-                    PersonalBalanceDAO.updatePersonalBalances(payer: self.payedBy_friend!, other: pers, value: priceForEach)
-                }
-                pers.total_costs = pers.total_costs  + priceForEach
-                
-                
-            }
-            CoreDataManager.save()
+
+            //creation of the transaction
+            let t = Transaction(name: self.textTitle.text!, total_price: p, spent: self.isSpent!)
+            TransactionDAO.creationTransactionUpdates(payedBy_friend: self.payedBy_friend!, t: t, selectedFriends : self.EmbedTransactionController.selectedFriends, priceForEach : priceForEach )
             
             
         }
