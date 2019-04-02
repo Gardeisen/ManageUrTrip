@@ -22,7 +22,11 @@ class DetailsFriendsController: UIViewController {
         if let afriend = self.friendSelected {
             self.fullname.text = afriend.fullname
             self.priceBalance.textColor = UIColor.red
-            //self.priceBalance.text = afriend.pTotal_I_payed
+            let balance = (afriend.pTotal_I_payed) - (afriend.pTotalCosts)
+            print(afriend.pTotal_I_payed)
+            print(afriend.pTotalCosts)
+            self.priceBalance.text = "\(balance)"
+            
             
         } else {
             self.fullname.text = ""

@@ -37,6 +37,8 @@ UIPickerViewDataSource{
             }
         }
         
+        self.payedBy_friend = self.pickerData[0]
+        
         //connect the pickerView :
         self.payedBy.delegate = self
         self.payedBy.dataSource = self
@@ -74,9 +76,9 @@ UIPickerViewDataSource{
                 if(pers != self.payedBy_friend!){
                     debt = Debt(price: priceForEach, friend: pers, transaction: t)
                     PersonalBalanceDAO.updatePersonalBalances(payer: self.payedBy_friend!, other: pers, value: priceForEach)
-                }else{
-                    self.payedBy_friend!.total_costs = self.payedBy_friend!.total_costs  + priceForEach
                 }
+                pers.total_costs = pers.total_costs  + priceForEach
+                
                 
             }
             CoreDataManager.save()
