@@ -37,6 +37,11 @@ class DetailsFriendsController: UIViewController {
         } else {
             self.fullname.text = ""
         }
+        if let aFriend = self.friendSelected {
+            //self.tablePersoBalance.balancePersonalSet_ViewModel = PersonalBalanceSetViewModel(friend : aFriend)
+        }
+        
+        
     }
     
     

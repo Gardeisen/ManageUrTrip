@@ -21,10 +21,13 @@ class TablePersonalBalance_ViewController: NSObject, UITableViewDataSource, Pers
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "equilibre", for: indexPath)
-        cell.textLabel?.text = " aucune idee "
-        
+        guard let balance = self.balancePersonalSet_ViewModel.get(balanceAt: indexPath.row) else{
+            fatalError("no transaction found at this index")
+        }
+        cell.textLabel?.text = " \(balance.value) "
         
         return cell
     }
@@ -36,7 +39,7 @@ class TablePersonalBalance_ViewController: NSObject, UITableViewDataSource, Pers
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //permet de choisir le nombre de lignes
-        return 10
+        return self.balancePersonalSet_ViewModel.count
         
         
     }
@@ -46,15 +49,21 @@ class TablePersonalBalance_ViewController: NSObject, UITableViewDataSource, Pers
     }
     
     func personalBalanceDeleted(at indexPath: IndexPath) {
-        
+        self.tableView.beginUpdates()
+        self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.middle)
+        self.tableView.endUpdates()
     }
     
     func personalBalanceUpdated(at indexPath: IndexPath) {
-        
+        self.tableView.beginUpdates()
+        //self.tableView.
+        self.tableView.endUpdates()
     }
     
     func personalBalanceAdded(at indexPath: IndexPath) {
-        
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [indexPath], with: UITableViewRowAnimation.middle)
+        self.tableView.endUpdates()
     }
     
 

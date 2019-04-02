@@ -41,15 +41,16 @@ class PersonalBalanceSetViewModel {
     var dataset : [PersonalBalance] = []
     var delegate : PersonalBalanceSetViewModelDelegate? = nil
     
+    
     init() {
-        if let data = PersonalBalanceDAO.fetchAll(){
-            self.modelset = PersonalBalanceSet(balance: data)
-            for p in self.modelset{
-                self.dataset.append(p)
-            }
-        }
-        else{
-            self.modelset = PersonalBalanceSet()
+        self.modelset = PersonalBalanceSet()
+    }
+    
+    init(friend : Friend) {
+        let data = PersonalBalanceDAO.fetchAllBalanceOfFriend(friend: friend)
+        self.modelset = PersonalBalanceSet(balance: data)
+        for p in self.modelset{
+            self.dataset.append(p)
         }
     }
     convenience init(delegate : PersonalBalanceSetViewModelDelegate) {

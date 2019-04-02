@@ -61,6 +61,21 @@ class PersonalBalanceDAO {
         }
         
     }
+    
+    static func fetchAllBalanceOfFriend(friend: Friend) -> [PersonalBalance]{
+        
+        var persoBalance: [PersonalBalance] = []
+        
+        for balance in friend.hasAdebt?.allObjects as! [PersonalBalance] {
+            
+            persoBalance.append(balance)
+            print("la requete du DAO-----------------------------------------------")
+            print(balance.fullname)
+        }
+        
+        return persoBalance
+    }
+    
     static func delete(balance : PersonalBalance){
         CoreDataManager.context.delete(balance)
     }
