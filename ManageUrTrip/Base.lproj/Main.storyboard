@@ -102,9 +102,12 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DAr-4i-puY" id="83S-VK-M7Z"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelBalance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z52-Jm-CUS">
-                                <rect key="frame" x="16" y="178" width="343" height="26.5"/>
+                                <rect key="frame" x="116" y="178" width="143" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -112,13 +115,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z52-Jm-CUS" secondAttribute="trailing" constant="100" id="2oR-LV-vjB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pzo-3D-Ngw" secondAttribute="trailing" id="CDg-NY-QDc"/>
-                            <constraint firstItem="Z52-Jm-CUS" firstAttribute="leading" secondItem="4rz-NS-qPL" secondAttribute="leadingMargin" id="FM4-5H-Sn2"/>
+                            <constraint firstItem="Z52-Jm-CUS" firstAttribute="leading" secondItem="4rz-NS-qPL" secondAttribute="leadingMargin" constant="100" id="SJr-d5-5OV"/>
                             <constraint firstItem="Pzo-3D-Ngw" firstAttribute="top" secondItem="sLj-me-hoQ" secondAttribute="bottom" constant="25" id="TeC-dq-X9q"/>
                             <constraint firstItem="SJ6-Tb-LUl" firstAttribute="leading" secondItem="4rz-NS-qPL" secondAttribute="leadingMargin" id="UiR-ov-BdB"/>
+                            <constraint firstItem="Z52-Jm-CUS" firstAttribute="top" secondItem="SJ6-Tb-LUl" secondAttribute="bottom" constant="5" id="Yig-3X-QdY"/>
+                            <constraint firstItem="Z52-Jm-CUS" firstAttribute="centerX" secondItem="4rz-NS-qPL" secondAttribute="centerX" id="dKt-38-Yge"/>
                             <constraint firstItem="Pzo-3D-Ngw" firstAttribute="leading" secondItem="4rz-NS-qPL" secondAttribute="leadingMargin" id="drN-8e-VF1"/>
-                            <constraint firstItem="Z52-Jm-CUS" firstAttribute="top" secondItem="SJ6-Tb-LUl" secondAttribute="bottom" constant="5" id="dyc-3f-FNo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Z52-Jm-CUS" secondAttribute="trailing" id="ldm-GS-TRs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SJ6-Tb-LUl" secondAttribute="trailing" id="mLq-Ss-NNv"/>
                             <constraint firstItem="SJ6-Tb-LUl" firstAttribute="top" secondItem="Pzo-3D-Ngw" secondAttribute="bottom" constant="30" id="tJb-AD-bjv"/>
                         </constraints>
@@ -130,6 +134,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhW-JA-qxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="DAr-4i-puY" customClass="TablePersonalBalance_ViewController" customModule="ManageUrTrip" customModuleProvider="target">
+                    <connections>
+                        <outlet property="tableView" destination="Inr-P5-3zF" id="iVd-HP-yMA"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="277.60000000000002" y="-1776.1619190404799"/>
         </scene>
