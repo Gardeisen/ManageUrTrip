@@ -15,7 +15,9 @@ class DetailsFriendsController: UIViewController {
     @IBOutlet weak var fullname: UILabel!
     @IBOutlet weak var priceBalance: UILabel!
     
+    @IBOutlet weak var moneySpent: UILabel!
     
+    @IBOutlet weak var totalCost: UILabel!
     @IBOutlet var tablePersoBalance: TablePersonalBalance_ViewController!
     
     
@@ -29,12 +31,12 @@ class DetailsFriendsController: UIViewController {
             
             if balance >= 0 {
                 self.priceBalance.text = "+ \(balance)"
-                self.priceBalance.backgroundColor = UIColor.green
+                self.priceBalance.backgroundColor = #colorLiteral(red: 0.4445736706, green: 0.7443419099, blue: 0.600685358, alpha: 1)
                 
             }
             else {
                 self.priceBalance.text = " \(balance)"
-                self.priceBalance.backgroundColor = UIColor.red
+                self.priceBalance.backgroundColor = #colorLiteral(red: 1, green: 0.3798090219, blue: 0.3253325522, alpha: 1)
             }
             self.tablePersoBalance.balancePersonalSet_ViewModel = PersonalBalanceSetViewModel(friend : afriend)
         }

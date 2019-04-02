@@ -27,8 +27,17 @@ class TablePersonalBalance_ViewController: NSObject, UITableViewDataSource, Pers
         guard let balance = self.balancePersonalSet_ViewModel.get(balanceAt: indexPath.row) else{
             fatalError("no transaction found at this index")
         }
-        cell.textLabel?.text = " \(balance.value) "
         
+        if balance.value > 0 {
+            
+            cell.textLabel?.text = " \(balance.fullname) owes me \(balance.value)"
+            cell.backgroundColor = #colorLiteral(red: 0.4445736706, green: 0.7443419099, blue: 0.600685358, alpha: 1)
+        }
+        else if balance.value < 0 {
+            let val = balance.value * (-1)
+            cell.textLabel?.text = " I owe \(val) to \(balance.fullname)"
+            cell.backgroundColor = #colorLiteral(red: 0.9982178807, green: 0.3798628449, blue: 0.3255227804, alpha: 1)
+        }
         return cell
     }
 

@@ -67,8 +67,6 @@ class PersonalBalanceDAO {
         for balance in friend.hasAdebt?.allObjects as! [PersonalBalance] {
             
             persoBalance.append(balance)
-            print("la requete du DAO-----------------------------------------------")
-            print(balance.fullname)
         }
         
         return persoBalance
