@@ -13,9 +13,11 @@ class Balance_ViewController: UIViewController {
     @IBOutlet var tableBalance_viewController: TableofBalance_ViewController!
     var travelSelected : Travel?
     
+    @IBOutlet weak var image: UIImageView!
     
     override func viewDidLoad() {
         
+        self.image.image = UIImage(named: "balance")
         if let atravel = self.travelSelected {
          
             self.tableBalance_viewController.balancePersonalSet_ViewModel = PersonalBalanceSetViewModel(travel : atravel)
