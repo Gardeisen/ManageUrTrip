@@ -27,7 +27,9 @@ class TableofBalance_ViewController: NSObject, UITableViewDataSource, PersonalBa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "allbalance", for: indexPath)
         let val = balance.value * (-1)
-        cell.detailTextLabel?.text = "\(val)€"
+        let formatted_price = String(format: "%.2f€", val)
+        cell.detailTextLabel?.text = formatted_price
+        //cell.detailTextLabel?.text = "\(val)€"
         cell.textLabel?.text = " \(balance.isLinkedTo?.fullname ?? "" ) owes to \(balance.fullname) "
         
     

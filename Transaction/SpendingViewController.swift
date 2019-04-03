@@ -53,7 +53,6 @@ class SpendingViewController: UIViewController {
             let embedTransactionController = createSpentController.childViewControllers[0] as! EmbedTransactionViewController
             //let embedTravelController = sender.source as! EmbedTransactionViewController
             if let transaction = embedTransactionController.newTransaction{
-                print("transaction not nil")
                 self.TransactionTableViewController.transactionSet_ViewModel.add(tran: transaction)
                 CoreDataManager.save()
             }

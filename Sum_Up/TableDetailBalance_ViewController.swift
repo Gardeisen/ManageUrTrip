@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class TableDetailBalance_ViewController: NSObject, UITableViewDataSource, PersonalBalanceSetViewModelDelegate {
 
@@ -33,13 +34,19 @@ class TableDetailBalance_ViewController: NSObject, UITableViewDataSource, Person
         cell.backgroundColor = UIColor.clear
         if eq > 0 {
             
-            //cell.detailTextLabel?.backgroundColor = #colorLiteral(red: 0.4445736706, green: 0.7443419099, blue: 0.600685358, alpha: 1)
-            cell.detailTextLabel?.text = "+\(eq)€"
+            cell.detailTextLabel?.backgroundColor = #colorLiteral(red: 0.4445736706, green: 0.7443419099, blue: 0.600685358, alpha: 1)
+            cell.detailTextLabel?.layer.cornerRadius = 10
+            cell.detailTextLabel?.clipsToBounds = true
+            let formatted_price = String(format: "+ %.2f€", eq)
+            cell.detailTextLabel?.text = formatted_price
         }
         else
         {
-            //cell.detailTextLabel?.backgroundColor = #colorLiteral(red: 0.9982178807, green: 0.3798628449, blue: 0.3255227804, alpha: 1)
-            cell.detailTextLabel?.text = "\(eq)€"
+            cell.detailTextLabel?.backgroundColor = #colorLiteral(red: 0.9982178807, green: 0.3798628449, blue: 0.3255227804, alpha: 1)
+            cell.detailTextLabel?.layer.cornerRadius = 10
+            cell.detailTextLabel?.clipsToBounds = true
+            let formatted_price = String(format: "%.2f€", eq)
+            cell.detailTextLabel?.text = formatted_price
         }
         
         

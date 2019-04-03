@@ -9,7 +9,7 @@
 import UIKit
 
 class Balance_ViewController: UIViewController {
-
+    
     @IBOutlet var tableBalance_viewController: TableofBalance_ViewController!
     var travelSelected : Travel?
     
@@ -19,7 +19,7 @@ class Balance_ViewController: UIViewController {
         
         self.image.image = UIImage(named: "balance")
         if let atravel = self.travelSelected {
-         
+            
             self.tableBalance_viewController.balancePersonalSet_ViewModel = PersonalBalanceSetViewModel(travel : atravel)
         }
     }
@@ -43,7 +43,6 @@ class Balance_ViewController: UIViewController {
         if (segue.identifier == "newPayment"){
             if let destination = segue.destination as? CreatePaymentViewController {
                 destination.travelSelect = self.travelSelected
-                print(destination.travelSelect==nil)
             }
         }
     }

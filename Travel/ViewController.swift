@@ -61,9 +61,7 @@ class ViewController: UIViewController {
             
         }
         if (segue.identifier == "editTravel"){
-            
-            print("etape2 : je passe dans le seg jusqu'au EditTravel")
-            
+
             if let destination = segue.destination as? EditTravel_ViewController{
                 
                 if let cell = sender as? UITableViewCell{
@@ -75,13 +73,10 @@ class ViewController: UIViewController {
                         fatalError("no travel found at this index")
                     }
                     destination.travelToEdit = travel
-                    print("etape2 : ok")
                     
                 }
             }
-            
         }
-        
     }
     
     // segue ViewControllerB -> ViewController

@@ -28,14 +28,17 @@ class TablePersonalBalance_ViewController: NSObject, UITableViewDataSource, Pers
             fatalError("no transaction found at this index")
         }
         
+        var formatted_price : String
         if balance.value > 0 {
-            
-            cell.textLabel?.text = " \(balance.fullname) owes me \(balance.value) €"
+            formatted_price = String(format: "%.2f", balance.value)
+
+            cell.textLabel?.text = " \(balance.fullname) owes me \(formatted_price)€"
             cell.backgroundColor = #colorLiteral(red: 0.4445736706, green: 0.7443419099, blue: 0.600685358, alpha: 1)
         }
         else if balance.value < 0 {
             let val = balance.value * (-1)
-            cell.textLabel?.text = " I owe \(val) to \(balance.fullname) €"
+            formatted_price = String(format: "%.2f", val)
+            cell.textLabel?.text = " I owe \(formatted_price)€ to \(balance.fullname) "
             cell.backgroundColor = #colorLiteral(red: 0.9982178807, green: 0.3798628449, blue: 0.3255227804, alpha: 1)
         }
         return cell

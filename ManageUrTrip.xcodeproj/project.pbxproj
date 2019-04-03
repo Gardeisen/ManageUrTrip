@@ -15,7 +15,6 @@
 		3B3A38B4224B7C3400D4C5D5 /* Transaction_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A38B3224B7C3400D4C5D5 /* Transaction_TableViewController.swift */; };
 		3B3A38B6224B819500D4C5D5 /* SpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A38B5224B819500D4C5D5 /* SpendingViewController.swift */; };
 		3BEE7577224B6ECB00D2ED38 /* EmbedTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE7576224B6ECB00D2ED38 /* EmbedTravelViewController.swift */; };
-		3BF7A0BE224D0A6100C85846 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7A0BD224D0A6100C85846 /* AlertHelper.swift */; };
 		4A2854B6224A62B0007EB180 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854B5224A62B0007EB180 /* Travel.swift */; };
 		4A2854B8224A62E2007EB180 /* TravelDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854B7224A62E2007EB180 /* TravelDAO.swift */; };
 		4A2854BA224A630B007EB180 /* TravelSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2854B9224A630B007EB180 /* TravelSetViewModel.swift */; };
@@ -83,7 +82,6 @@
 		3B3A38B3224B7C3400D4C5D5 /* Transaction_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction_TableViewController.swift; sourceTree = "<group>"; };
 		3B3A38B5224B819500D4C5D5 /* SpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingViewController.swift; sourceTree = "<group>"; };
 		3BEE7576224B6ECB00D2ED38 /* EmbedTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedTravelViewController.swift; sourceTree = "<group>"; };
-		3BF7A0BD224D0A6100C85846 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		4A2854B5224A62B0007EB180 /* Travel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		4A2854B7224A62E2007EB180 /* TravelDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDAO.swift; sourceTree = "<group>"; };
 		4A2854B9224A630B007EB180 /* TravelSetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelSetViewModel.swift; sourceTree = "<group>"; };
@@ -193,14 +191,6 @@
 			path = Transaction;
 			sourceTree = "<group>";
 		};
-		3BF7A0BC224D06DA00C85846 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				3BF7A0BD224D0A6100C85846 /* AlertHelper.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		827E3349224A282600DCA34F = {
 			isa = PBXGroup;
 			children = (
@@ -224,7 +214,6 @@
 		827E3354224A282600DCA34F /* ManageUrTrip */ = {
 			isa = PBXGroup;
 			children = (
-				3BF7A0BC224D06DA00C85846 /* Helper */,
 				827E3386224A285800DCA34F /* DAO */,
 				827E3387224A286400DCA34F /* ViewModel */,
 				827E3388224A287100DCA34F /* Model */,
@@ -392,7 +381,7 @@
 				TargetAttributes = {
 					827E3351224A282600DCA34F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = AXDKUH7ZVK;
+						DevelopmentTeam = G3A5J39L3J;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
@@ -483,7 +472,6 @@
 				3BEE7577224B6ECB00D2ED38 /* EmbedTravelViewController.swift in Sources */,
 				3B3A38B4224B7C3400D4C5D5 /* Transaction_TableViewController.swift in Sources */,
 				4A2854BE224A65AE007EB180 /* TravelSet.swift in Sources */,
-				3BF7A0BE224D0A6100C85846 /* AlertHelper.swift in Sources */,
 				4A84D7F0224A97A7001D644A /* ShowTravel_ViewController.swift in Sources */,
 				827E335E224A282600DCA34F /* ManageUrTrip.xcdatamodeld in Sources */,
 				82D26FD1224BEF5C00019B14 /* FriendSetViewModel.swift in Sources */,
@@ -657,10 +645,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = AXDKUH7ZVK;
+				DEVELOPMENT_TEAM = G3A5J39L3J;
 				INFOPLIST_FILE = ManageUrTrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Marine-Ines.ManageUrTrip1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Marine-Ines.ManageUrTrip2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -672,10 +660,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = AXDKUH7ZVK;
+				DEVELOPMENT_TEAM = G3A5J39L3J;
 				INFOPLIST_FILE = ManageUrTrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Marine-Ines.ManageUrTrip1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Marine-Ines.ManageUrTrip2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
