@@ -10,12 +10,13 @@ import UIKit
 
 class DetailsBalance_ViewController: UIViewController {
 
+    @IBOutlet weak var image: UIImageView!
     var travelSelected : Travel?
     
     @IBOutlet var tableDetailBalance_ViewController: TableDetailBalance_ViewController!
     
     override func viewDidLoad() {
-        
+        self.image.image = UIImage(named: "debt-2")
         if let atravel = self.travelSelected {
             
             self.tableDetailBalance_ViewController.friendSet_ViewModel = FriendSetViewModel(travel: atravel)
