@@ -27,21 +27,25 @@ class SpendingViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    
         if (segue.identifier == "newSpent") {
             
             if let destination = segue.destination as? CreateSpentViewController {
                 destination.travelSelect = self.travelSelected
                 
-            }
-            
+               
+                }
         }
+        
     }
     
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
         if(sender.identifier == "save"){ //Unwind LINK
-            let embedTravelController = sender.source as! EmbedTransactionViewController
-            if let transaction = embedTravelController.newTransaction{
+            let createSpentController = sender.source as! CreateSpentViewController
+            let embedTransactionController = createSpentController.childViewControllers[0] as! EmbedTransactionViewController
+            //let embedTravelController = sender.source as! EmbedTransactionViewController
+            if let transaction = embedTransactionController.newTransaction{
+                print("transaction not nil")
                 self.TransactionTableViewController.transactionSet_ViewModel.add(tran: transaction)
                 CoreDataManager.save()
             }
