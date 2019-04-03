@@ -451,7 +451,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jga-NX-ML3">
                                 <rect key="frame" x="0.0" y="62" width="375" height="605"/>
                                 <connections>
-                                    <segue destination="LwL-ti-EgW" kind="embed" id="a0C-3I-KZh"/>
+                                    <segue destination="LwL-ti-EgW" kind="embed" identifier="newPayment" id="a0C-3I-KZh"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Pay Down " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gI1-MC-cQd">
@@ -508,7 +508,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="sub-zn-RP4" kind="presentation" identifier="newPayDown" id="kR5-Ni-jAf"/>
+                                    <segue destination="sub-zn-RP4" kind="presentation" identifier="newPayment" id="kR5-Ni-jAf"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-A6-YrN">
@@ -1242,6 +1242,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="YRw-pH-2KQ"/>
-        <segue reference="4hE-TW-Y6Z"/>
+        <segue reference="a0C-3I-KZh"/>
     </inferredMetricsTieBreakers>
 </document>
