@@ -48,6 +48,7 @@ UIPickerViewDataSource{
         
         if let t = self.travelSelected {
             self.EmbedTransactionController.friendSetViewModel = FriendSetViewModel(travel : t)
+            self.transactionDate.minimumDate = t.beginning
         }
         else {
         }
