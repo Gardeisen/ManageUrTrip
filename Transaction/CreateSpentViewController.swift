@@ -33,11 +33,7 @@ class CreateSpentViewController: UIViewController {
                     var p : Float = (e.interPrice.text! as NSString).floatValue
                     //the price for each
                     var priceForEach = p / Float(e.EmbedTransactionController.selectedFriends.count())
-                    
-                    if(!e.isSpent!){
-                        p = p * (-1)
-                        priceForEach = priceForEach * (-1)
-                    }
+
                     //UPDATES :
                     e.payedBy_friend!.total_i_payed = e.payedBy_friend!.total_i_payed  + p
                     //creation of the transaction

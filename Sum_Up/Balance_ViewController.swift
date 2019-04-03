@@ -31,7 +31,7 @@ class Balance_ViewController: UIViewController {
                 destination.travelSelected = self.travelSelected
                 
             }
-     
+            
         }
         
         if (segue.identifier == "newPayment"){
@@ -40,5 +40,9 @@ class Balance_ViewController: UIViewController {
                 print(destination.travelSelect==nil)
             }
         }
-}
+    }
+    
+    @IBAction func unwindToBalanceView(sender: UIStoryboardSegue) {
+        
+    }
 }
