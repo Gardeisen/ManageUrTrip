@@ -27,12 +27,8 @@ extension Transaction {
         self.pName = name
         self.isSpent = spent
         self.date = transactionDate
+        self.pPrice = total_price
         
-        if(isSpent){
-            self.pPrice = total_price
-        }else{
-            self.pPrice = total_price * (-1)
-        }
         
     }
 }

@@ -31,7 +31,14 @@ class Balance_ViewController: UIViewController {
                 destination.travelSelected = self.travelSelected
                 
             }
-            
+     
+        }
+        
+        if (segue.identifier == "newPayment"){
+            if let destination = segue.destination as? CreatePaymentViewController {
+                destination.travelSelect = self.travelSelected
+                print(destination.travelSelect==nil)
+            }
         }
 }
 }

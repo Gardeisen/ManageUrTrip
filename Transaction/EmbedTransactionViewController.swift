@@ -52,31 +52,6 @@ UIPickerViewDataSource{
         }
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
-        if segue.identifier == "save" { //UNWIND LINK
-            
-            // retrieve the total price and update the payer
-            let p : Float = (self.interPrice.text! as NSString).floatValue
-            self.payedBy_friend!.total_i_payed = self.payedBy_friend!.total_i_payed  + p
-            
-            //the price for each
-            let priceForEach = p / Float(self.EmbedTransactionController.selectedFriends.count())
-
-            //creation of the transaction
-            self.newTransaction = Transaction(name: self.textTitle.text!, total_price: p, spent: self.isSpent!, transactionDate: transactionDate.date)
-            TransactionDAO.creationTransactionUpdates(payedBy_friend: self.payedBy_friend!, t: self.newTransaction!, selectedFriends : self.EmbedTransactionController.selectedFriends, priceForEach : priceForEach )
-            
-
-            
-            
-        }
-        else if segue.identifier == "cancel"{}
-        else{
-            
-        } }
     
     //number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
