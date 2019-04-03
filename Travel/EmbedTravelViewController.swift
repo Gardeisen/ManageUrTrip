@@ -91,7 +91,6 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
                 return
             }
 
-
             let friend = Friend(firstname: firstname, lastname: lastname)
             self.participants.append(friend)
             self.tableParticipantEmbedTravel.friendSetViewModel.add(friend: friend)
@@ -107,8 +106,6 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
         
         
     }
-    
-    
     
     
 }
