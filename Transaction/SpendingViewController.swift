@@ -51,7 +51,6 @@ class SpendingViewController: UIViewController {
         if(sender.identifier == "save"){ //Unwind LINK
             let createSpentController = sender.source as! CreateSpentViewController
             let embedTransactionController = createSpentController.childViewControllers[0] as! EmbedTransactionViewController
-            //let embedTravelController = sender.source as! EmbedTransactionViewController
             if let transaction = embedTransactionController.newTransaction{
                 self.TransactionTableViewController.transactionSet_ViewModel.add(tran: transaction)
                 CoreDataManager.save()

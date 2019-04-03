@@ -43,13 +43,11 @@ class TableParticipantEmbedViewController: NSObject, UITableViewDataSource, Frie
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        //permet de choisir le nombre de sections (confert fonction pour afficher le nom des section si on veut)
         return 1
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //permet de choisir le nombre de lignes
         return self.friendSetViewModel.count
         
         
@@ -68,10 +66,7 @@ class TableParticipantEmbedViewController: NSObject, UITableViewDataSource, Frie
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
-        
-        
-        //let alertHelper = AlertHelper()
-        //alertHelper.alert(title: "", message: "")
+
         if(editingStyle == UITableViewCell.EditingStyle.delete){
             self.friendSetViewModel.delete(friendAt: indexPath.row)
         }

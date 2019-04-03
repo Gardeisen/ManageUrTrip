@@ -36,5 +36,4 @@ extension Travel{
         self.isComposedBy = NSSet(array: isParticing)
     }
     
-    //image of travel has to be handle
 }

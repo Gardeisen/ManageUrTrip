@@ -23,13 +23,11 @@ class TableParticipatingController: NSObject , UITableViewDataSource, FriendSetV
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        //permet de choisir le nombre de sections (confert fonction pour afficher le nom des section si on veut)
         return 1
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //permet de choisir le nombre de lignes
         return self.friendSet_ViewModel.count
         
         
@@ -37,14 +35,11 @@ class TableParticipatingController: NSObject , UITableViewDataSource, FriendSetV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // indexPath = position de la cellule dans tableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellParticipants", for: indexPath)
         guard let friend = self.friendSet_ViewModel.get(friendAt: indexPath.row) else{
             fatalError("no travel found at this index")
         }
         cell.textLabel?.text = " \(friend.fullname) "
-        //cell.detailTextLabel?.text = " voici un sous titre"
-        //cell.imageView?.image = UIImage(named: "beach")
         return cell
     }
     

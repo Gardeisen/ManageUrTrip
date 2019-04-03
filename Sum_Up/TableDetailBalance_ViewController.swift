@@ -32,6 +32,7 @@ class TableDetailBalance_ViewController: NSObject, UITableViewDataSource, Person
         let eq = friend.pTotal_I_payed - friend.pTotalCosts
         cell.textLabel?.text = "\(friend.fullname) "
         cell.backgroundColor = UIColor.clear
+        
         if eq > 0 {
             
             cell.detailTextLabel?.backgroundColor = #colorLiteral(red: 0.4445736706, green: 0.7443419099, blue: 0.600685358, alpha: 1)
@@ -39,9 +40,9 @@ class TableDetailBalance_ViewController: NSObject, UITableViewDataSource, Person
             cell.detailTextLabel?.clipsToBounds = true
             let formatted_price = String(format: "+ %.2f€", eq)
             cell.detailTextLabel?.text = formatted_price
-        }
-        else
-        {
+            
+        }else{
+            
             cell.detailTextLabel?.backgroundColor = #colorLiteral(red: 0.9982178807, green: 0.3798628449, blue: 0.3255227804, alpha: 1)
             cell.detailTextLabel?.layer.cornerRadius = 10
             cell.detailTextLabel?.clipsToBounds = true
@@ -49,19 +50,17 @@ class TableDetailBalance_ViewController: NSObject, UITableViewDataSource, Person
             cell.detailTextLabel?.text = formatted_price
         }
         
-        
-        
         return cell
         
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        //permet de choisir le nombre de sections (confert fonction pour afficher le nom des section si on veut)
+
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //permet de choisir le nombre de lignes
+       
         return self.friendSet_ViewModel.count
         
         

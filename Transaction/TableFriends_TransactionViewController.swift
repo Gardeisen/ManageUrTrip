@@ -45,13 +45,11 @@ class TableFriends_TransactionViewController: NSObject, UITableViewDataSource, U
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        //permet de choisir le nombre de sections (confert fonction pour afficher le nom des section si on veut)
         return 1
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //permet de choisir le nombre de lignes
         return self.friendSetViewModel.count
         
         
@@ -65,7 +63,6 @@ class TableFriends_TransactionViewController: NSObject, UITableViewDataSource, U
             fatalError("no travel found at this index")
         }
         cell.textLabel?.text = " \(friend.fullname) "
-        //tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
        
         return cell
     }

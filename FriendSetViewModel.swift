@@ -62,7 +62,7 @@ class FriendSetViewModel {
     }
     
     convenience init(delegate : FriendSetViewModelDelegate, t : Travel) {
-        //self.init()
+     
         self.init(travel : t)
         self.delegate = delegate
         

@@ -20,19 +20,18 @@ class Transaction_TableViewController: NSObject, UITableViewDataSource, UITableV
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        //permet de choisir le nombre de sections (confert fonction pour afficher le nom des section si on veut)
         return 1
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //permet de choisir le nombre de lignes
         return self.transactionSet_ViewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // indexPath = position de la cellule dans tableView
+        // indexPath = position of the cell in the table view
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellSpending", for: indexPath)
         guard let transaction = self.transactionSet_ViewModel.get(transactionAt: indexPath.row) else{
             fatalError("no travel found at this index")

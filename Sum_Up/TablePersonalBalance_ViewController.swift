@@ -45,12 +45,12 @@ class TablePersonalBalance_ViewController: NSObject, UITableViewDataSource, Pers
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        //permet de choisir le nombre de sections (confert fonction pour afficher le nom des section si on veut)
+        // allows to choose the number of sections
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //permet de choisir le nombre de lignes
+        //allows to choose the number of rows
         return self.balancePersonalSet_ViewModel.count
         
         

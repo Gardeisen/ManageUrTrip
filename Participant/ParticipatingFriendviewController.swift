@@ -49,7 +49,6 @@ class ParticipatingFriendviewController: UIViewController {
                         fatalError("no friend found at this index")
                     }
                     destination.friendSelected = friend
-                    //self.TravelTableViewController.mainVC = nil
                 }
             }
             

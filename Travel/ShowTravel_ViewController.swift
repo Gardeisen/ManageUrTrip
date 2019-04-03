@@ -29,8 +29,6 @@ class ShowTravel_ViewController: UIViewController {
             let format = DateFormatter()
             format.dateFormat = "dd/MM/yyyy"
             let textD1 = format.string(from: atravel.beginning!)
-            //idem pour date de fin
-            //let textD2 = format.string(from: atravel.end!)
             self.dates.text = "\(textD1) "
             
         } else {

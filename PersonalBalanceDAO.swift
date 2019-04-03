@@ -36,6 +36,7 @@ class PersonalBalanceDAO {
         }
     }
     
+    
     static func updatePersonalBalances( payer : Friend, other : Friend, value : Float){
         let payerBalance : [PersonalBalance]? = getPersonalBalance(owner: payer, fn: other.fullname)
         
@@ -57,6 +58,7 @@ class PersonalBalanceDAO {
         }
         
     }
+    
     
     static func fetchAllBalanceOfFriend(friend: Friend) -> [PersonalBalance]{
         

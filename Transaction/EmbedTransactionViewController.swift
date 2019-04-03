@@ -60,7 +60,7 @@ UIPickerViewDataSource{
         return 1
     }
     
-    //number of roxs of data
+    //number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
     }
