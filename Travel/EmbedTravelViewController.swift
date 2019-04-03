@@ -23,8 +23,12 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
         
         super.viewDidLoad()
         if let travelToUpdate = self.newTravel {
-            
-            self.title_field.text = travelToUpdate.title
+            // only for the case of Update
+
+            self.title_field.placeholder = travelToUpdate.title
+            self.startDate.date = travelToUpdate.beginning!
+            //self.endDate.date = travelToUpdate.end!
+            self.tableParticipantEmbedTravel.friendSetViewModel = FriendSetViewModel(travel: travelToUpdate)
             
         }
        
