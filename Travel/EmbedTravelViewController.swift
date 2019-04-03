@@ -22,17 +22,11 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        print("etape 4 : j'arrive dans le Embed")
-        print("table ParticipantEmbed nulle ????")
-        print(self.tableParticipantEmbedTravel == nil)
-        print(newTravel?.pTitle)
         if let travelToUpdate = self.newTravel {
             
             self.title_field.text = travelToUpdate.title
             
         }
-        print("etape 4 : ok")
        
     }
     // preparation before navigation

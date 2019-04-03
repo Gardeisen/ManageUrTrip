@@ -83,7 +83,6 @@ class Travel_TableViewController: NSObject, UITableViewDelegate, UITableViewData
     }
     
     func editHandlerAction(action: UITableViewRowAction,indexPath: IndexPath) -> Void {
-        print("etape 1 : je clique sur le bouton EDIT ")
         self.mainVC.performSegue(withIdentifier: "editTravel", sender: self.tableView.cellForRow(at: indexPath))
     }
     

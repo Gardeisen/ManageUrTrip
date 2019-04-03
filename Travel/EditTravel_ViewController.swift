@@ -16,7 +16,6 @@ class EditTravel_ViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("etape 3 : je suis dans editTravel view controller")
         
         if segue.identifier == "editTravel"{
             
@@ -25,6 +24,5 @@ class EditTravel_ViewController: UIViewController {
                 
             }
         }
-        print("etape 3 ok")
     }
 }

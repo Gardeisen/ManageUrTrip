@@ -18,10 +18,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        print("j'initialise Travel table View COntroller")
         // Do any additional setup after loading the view, typically from a nib.
         self.TravelTableViewController = Travel_TableViewController(tableView: self.travelTableView, mainViewController: self)
-        print("ok")
+        
     }
 
     override func didReceiveMemoryWarning() {
