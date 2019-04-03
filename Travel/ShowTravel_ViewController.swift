@@ -23,7 +23,7 @@ class ShowTravel_ViewController: UIViewController {
         if let atravel = self.travelSelected {
             self.name.text = atravel.title
             self.name.textColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-            self.image.image = UIImage(named: "beach")
+            self.image.image = UIImage(named: "beach-1")
             
             
             let format = DateFormatter()

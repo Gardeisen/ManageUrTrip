@@ -47,7 +47,7 @@ class Travel_TableViewController: NSObject, UITableViewDelegate, UITableViewData
         }
         cell.textLabel?.text = " \(travel.title) "
         cell.textLabel?.textColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-        cell.imageView?.image = UIImage(named: "beach")
+        cell.imageView?.image = UIImage(named: "beach-1")
         //handle date
         let format = DateFormatter()
         format.dateFormat = "dd/MM/yyyy"

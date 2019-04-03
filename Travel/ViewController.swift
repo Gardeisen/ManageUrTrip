@@ -13,11 +13,15 @@ class ViewController: UIViewController {
     
     var TravelTableViewController: Travel_TableViewController!
     
+    @IBOutlet weak var image2: UIImageView!
+    
     @IBOutlet weak var travelTableView: UITableView!
     
     override func viewDidLoad() {
         
+        
         super.viewDidLoad()
+        self.image2.image = UIImage(named: "suitcase-1")
         // Do any additional setup after loading the view, typically from a nib.
         self.TravelTableViewController = Travel_TableViewController(tableView: self.travelTableView, mainViewController: self)
         

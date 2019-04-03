@@ -843,8 +843,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pTE-eh-of9">
-                                <rect key="frame" x="16" y="69" width="343" height="598"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="21" y="359" width="343" height="308"/>
+                                <color key="backgroundColor" red="0.87635844949999997" green="0.94481664899999995" blue="0.978333652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellTrip" textLabel="sLe-ol-CjC" detailTextLabel="O3G-d2-2TE" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Ala-D0-Cox">
                                         <rect key="frame" x="0.0" y="28" width="343" height="60"/>
@@ -868,21 +868,31 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.87635844949999997" green="0.94481664899999995" blue="0.978333652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.87635844949999997" green="0.94481664899999995" blue="0.978333652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="JX6-86-saY" kind="show" identifier="ShowTravelDetails" id="Yvt-fC-n5L"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2j-S2-U9L">
+                                <rect key="frame" x="67.5" y="104" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="0gC-a7-Ivg"/>
+                                    <constraint firstAttribute="width" constant="240" id="U3M-VM-hfq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.6277876496" green="0.83667403460000001" blue="1" alpha="0.54473458900000005" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pTE-eh-of9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Blr-pf-IGn"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pTE-eh-of9" secondAttribute="bottom" id="CUn-Jc-Zf8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pTE-eh-of9" secondAttribute="trailing" id="fMQ-R9-KPK"/>
-                            <constraint firstItem="pTE-eh-of9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="lXL-IV-ReX"/>
+                            <constraint firstItem="pTE-eh-of9" firstAttribute="top" secondItem="N2j-S2-U9L" secondAttribute="bottom" constant="15" id="7tm-Rk-AAd"/>
+                            <constraint firstItem="pTE-eh-of9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="CTi-zX-Hzv"/>
+                            <constraint firstItem="pTE-eh-of9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="b8u-QE-KUC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pTE-eh-of9" secondAttribute="bottom" id="iBP-0D-BXY"/>
+                            <constraint firstItem="N2j-S2-U9L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mvF-xR-kDW"/>
+                            <constraint firstItem="N2j-S2-U9L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="xy6-nb-44o"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ManageUrTrip" id="a0O-xk-HT0">
@@ -895,13 +905,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="image2" destination="N2j-S2-U9L" id="mhN-yT-nNr"/>
                         <outlet property="travelTableView" destination="pTE-eh-of9" id="anH-5S-OaZ"/>
                         <segue destination="CXZ-VP-FIb" kind="presentation" identifier="editTravel" id="6RP-fL-6Oh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="225" y="121"/>
+            <point key="canvasLocation" x="224.80000000000001" y="120.98950524737631"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dcY-uI-FAc">
