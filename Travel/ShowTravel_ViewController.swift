@@ -25,6 +25,14 @@ class ShowTravel_ViewController: UIViewController {
             self.name.textColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
             self.image.image = UIImage(named: "beach")
             
+            
+            let format = DateFormatter()
+            format.dateFormat = "dd/MM/yyyy"
+            let textD1 = format.string(from: atravel.beginning!)
+            //idem pour date de fin
+            //let textD2 = format.string(from: atravel.end!)
+            self.dates.text = "\(textD1) - end DateTODO? "
+            
         } else {
             self.name.text = ""
         }

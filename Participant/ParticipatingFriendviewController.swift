@@ -14,8 +14,10 @@ class ParticipatingFriendviewController: UIViewController {
     var travelSelected : Travel?
     @IBOutlet var ParticipantsViewController: TableParticipatingController!
     
+    @IBOutlet weak var image: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.image.image = UIImage(named: "high-five-2")
         if let atravel = self.travelSelected {
             self.ParticipantsViewController.friendSet_ViewModel = FriendSetViewModel(travel: atravel)
             

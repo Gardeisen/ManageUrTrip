@@ -21,12 +21,13 @@ class DetailsFriendsController: UIViewController {
     @IBOutlet var tablePersoBalance: TablePersonalBalance_ViewController!
     
     
+    @IBOutlet weak var image: UIImageView!
     override func viewDidLoad() {
-        
+        self.image.image = UIImage(named: "loupe")
         super.viewDidLoad()
         if let afriend = self.friendSelected {
             
-            self.fullname.text = afriend.fullname
+            self.fullname.text = "Personal Balance of : \(afriend.fullname)"
             let balance = (afriend.pTotal_I_payed) - (afriend.pTotalCosts)
             self.moneySpent.text = " \(afriend.pTotal_I_payed) €"
             self.moneySpent.backgroundColor = #colorLiteral(red: 0.5470487775, green: 0.7698300457, blue: 1, alpha: 1)
