@@ -8,16 +8,23 @@
 
 import UIKit
 
-class EditTravel_ViewController: ViewController {
+class EditTravel_ViewController: UIViewController {
+    
+    
     var travelToEdit : Travel?
     
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("ok prepare")
-        if segue.identifier == "embedEditTravel"{
+        print("etape 3 : je suis dans editTravel view controller")
+        
+        if segue.identifier == "editTravel"{
+            
             if let embedController = segue.destination as? EmbedTravelViewController{
                 embedController.newTravel = self.travelToEdit
-                print(travelToEdit == nil)
+                
             }
         }
+        print("etape 3 ok")
     }
 }

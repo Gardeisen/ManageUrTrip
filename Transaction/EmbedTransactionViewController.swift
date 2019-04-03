@@ -27,6 +27,8 @@ UIPickerViewDataSource{
     var pickerData : [Friend] = []
     
     var newTransaction : Transaction?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

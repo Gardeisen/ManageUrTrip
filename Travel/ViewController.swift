@@ -15,11 +15,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var travelTableView: UITableView!
     
-    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        print("j'initialise Travel table View COntroller")
         // Do any additional setup after loading the view, typically from a nib.
         self.TravelTableViewController = Travel_TableViewController(tableView: self.travelTableView, mainViewController: self)
+        print("ok")
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +37,8 @@ class ViewController: UIViewController {
             if let destination = segue.destination as? ShowTravel_ViewController {
                 if let cell = sender as? UITableViewCell{
                     
+                    
+                    
                     guard let indexPath = self.TravelTableViewController.tableView.indexPath(for: cell) else{
                         return
                     }
@@ -48,10 +52,13 @@ class ViewController: UIViewController {
             }
             
         }
-        else if (segue.identifier == "EditTravel"){
+        if (segue.identifier == "editTravel"){
+            
+            print("etape2 : je passe dans le seg jusqu'au EditTravel")
+            
             if let destination = segue.destination as? EditTravel_ViewController{
+                
                 if let cell = sender as? UITableViewCell{
-                    
                     guard let indexPath = self.TravelTableViewController.tableView.indexPath(for: cell) else{
                         return
                     }
@@ -60,9 +67,11 @@ class ViewController: UIViewController {
                         fatalError("no travel found at this index")
                     }
                     destination.travelToEdit = travel
-                    //self.TravelTableViewController.mainVC = nil
+                    print("etape2 : ok")
+                    
                 }
             }
+            
         }
         
     }
