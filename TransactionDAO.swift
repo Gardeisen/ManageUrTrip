@@ -31,7 +31,7 @@ class TransactionDAO {
         
     }
     
-    static func fetchAllTransactionOfTravel(travel : Travel) -> [Transaction]{
+    static func fetchAllSpendingsOfTravel(travel : Travel) -> [Transaction]{
         var travelTransaction: [Transaction] = []
         
         if let _fiendsOfTravel = TravelDAO.getFriendOfATravel(travel: travel){
@@ -41,8 +41,10 @@ class TransactionDAO {
                 if let _transactionsOfFriend = f.payes{
                     
                      for t in _transactionsOfFriend.allObjects as! [Transaction]{
+                        if(t.isSpent){
+                            travelTransaction.append(t)
+                        }
                         
-                        travelTransaction.append(t)
                     }
                 }
             }

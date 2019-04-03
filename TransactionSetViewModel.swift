@@ -48,7 +48,7 @@ class TransactionSetViewModel  {
     }
     
     init(travel : Travel) {
-        let data = TransactionDAO.fetchAllTransactionOfTravel(travel: travel)
+        let data = TransactionDAO.fetchAllSpendingsOfTravel(travel: travel)
         self.modelset = TransactionSet(transaction: data)
         for p in self.modelset{
             self.dataset.append(p)

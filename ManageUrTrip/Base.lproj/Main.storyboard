@@ -838,7 +838,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6D-cf-K6r">
                                 <rect key="frame" x="0.0" y="54" width="375" height="613"/>
                                 <connections>
-                                    <segue destination="Ze3-1A-MA0" kind="embed" identifier="embedEditTravel" id="qnb-Tp-gGB"/>
+                                    <segue destination="Ze3-1A-MA0" kind="embed" identifier="editTravel" id="qnb-Tp-gGB"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -888,6 +888,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LwL-ti-EgW" id="23E-an-nqH"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGi-aL-7AA">
                                 <rect key="frame" x="15" y="44" width="58.5" height="24"/>
@@ -940,6 +943,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LwL-ti-EgW" id="mah-Cn-BHi"/>
+                                </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="z64-LC-b8e">
                                 <rect key="frame" x="16" y="107" width="343" height="86"/>
@@ -1235,7 +1241,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qnb-Tp-gGB"/>
+        <segue reference="YRw-pH-2KQ"/>
         <segue reference="4hE-TW-Y6Z"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -25,8 +25,14 @@ extension Transaction {
     convenience init(name : String, total_price : Float, spent : Bool, transactionDate: Date?){
         self.init(context: CoreDataManager.context)
         self.pName = name
-        self.pPrice = total_price
         self.isSpent = spent
         self.date = transactionDate
+        
+        if(isSpent){
+            self.pPrice = total_price
+        }else{
+            self.pPrice = total_price * (-1)
+        }
+        
     }
 }
