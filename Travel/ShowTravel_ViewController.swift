@@ -31,7 +31,7 @@ class ShowTravel_ViewController: UIViewController {
             let textD1 = format.string(from: atravel.beginning!)
             //idem pour date de fin
             //let textD2 = format.string(from: atravel.end!)
-            self.dates.text = "\(textD1) - end DateTODO? "
+            self.dates.text = "\(textD1) "
             
         } else {
             self.name.text = ""

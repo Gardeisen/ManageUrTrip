@@ -21,33 +21,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MANAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwx-et-I8R">
-                                <rect key="frame" x="114.5" y="248" width="146" height="42"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ManageUrTrip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rs-dd-JJw">
+                                <rect key="frame" x="85" y="543.5" width="205" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
+                                <color key="textColor" red="0.20920881628990173" green="0.44270047545433044" blue="0.50167232751846313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhf-ca-CCb">
-                                <rect key="frame" x="161" y="310" width="53" height="58"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVN-Nw-gfd">
-                                <rect key="frame" x="150" y="388" width="75" height="42"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="passport-2" translatesAutoresizingMaskIntoConstraints="NO" id="Na6-Z1-pNT">
+                                <rect key="frame" x="-2.5" y="143.5" width="380" height="380"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.69622009992599487" green="0.86474031209945679" blue="0.9981798529624939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IVN-Nw-gfd" firstAttribute="top" secondItem="Zhf-ca-CCb" secondAttribute="bottom" constant="20" id="Ae5-PE-Wza"/>
-                            <constraint firstItem="hwx-et-I8R" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DJ8-Ll-pWI"/>
-                            <constraint firstItem="hwx-et-I8R" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="228" id="GqQ-Em-R8f"/>
-                            <constraint firstItem="Zhf-ca-CCb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HMp-Ju-6rR"/>
-                            <constraint firstItem="Zhf-ca-CCb" firstAttribute="top" secondItem="hwx-et-I8R" secondAttribute="bottom" constant="20" id="RIV-7q-sw8"/>
-                            <constraint firstItem="IVN-Nw-gfd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="di8-h9-SVM"/>
+                            <constraint firstItem="7Rs-dd-JJw" firstAttribute="top" secondItem="Na6-Z1-pNT" secondAttribute="bottom" constant="20" id="9uq-7k-5qG"/>
+                            <constraint firstItem="7Rs-dd-JJw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BCK-pX-bhX"/>
+                            <constraint firstItem="Na6-Z1-pNT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KIs-8v-i3f"/>
+                            <constraint firstItem="Na6-Z1-pNT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Qej-Hx-E3I"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -56,4 +45,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="passport-2" width="380" height="380"/>
+    </resources>
 </document>

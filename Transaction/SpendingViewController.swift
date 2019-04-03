@@ -10,11 +10,13 @@ import UIKit
 
 class SpendingViewController: UIViewController {
     
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet var TransactionTableViewController: Transaction_TableViewController!
     var travelSelected : Travel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.image.image = UIImage(named: "coins")
         // Do any additional setup after loading the view, typically from a nib.
         if let atravel = self.travelSelected {
             self.TransactionTableViewController.transactionSet_ViewModel = TransactionSetViewModel(delegate: self.TransactionTableViewController, travel: atravel)
