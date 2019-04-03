@@ -28,13 +28,13 @@ class CreatePaymentViewController: UIViewController {
                     var p : Float = (e.interPrice.text! as NSString).floatValue
                     //the price for each
                     var priceForEach = p / Float(e.EmbedTransactionController.selectedFriends.count())
-                    priceForEach = priceForEach * (-1)
-    
+                    
                     //UPDATES :
                     e.payedBy_friend!.total_i_payed = e.payedBy_friend!.total_i_payed  + p
                     //creation of the transaction
                     e.newTransaction = Transaction(name: e.textTitle.text!, total_price: p, spent: e.isSpent!, transactionDate: e.transactionDate.date)
-                    TransactionDAO.creationTransactionUpdates(payedBy_friend: e.payedBy_friend!, t: e.newTransaction!, selectedFriends : e.EmbedTransactionController.selectedFriends, priceForEach : priceForEach )
+                    
+                    TransactionDAO.creationPaymentUpdates(payedBy_friend: e.payedBy_friend!, t: e.newTransaction!, selectedFriends : e.EmbedTransactionController.selectedFriends, priceForEach : priceForEach )
                     
                 }
                 else if segue.identifier == "cancel"{}

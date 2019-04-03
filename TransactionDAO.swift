@@ -53,6 +53,27 @@ class TransactionDAO {
         
     }
     
+    //priceForEach>0
+    static func creationPaymentUpdates(payedBy_friend: Friend, t: Transaction, selectedFriends : FriendSet, priceForEach : Float ){
+        //the transaction
+        t.isPayedBy = payedBy_friend
+        let debtPrice = priceForEach * (-1)
+        
+        var debt : Debt
+        for pers in selectedFriends{
+            if(pers != payedBy_friend){
+                var debt = Debt(price: debtPrice, friend: pers, transaction: t)
+                //priceForEach <0 here
+                PersonalBalanceDAO.updatePersonalBalances(payer: payedBy_friend, other: pers, value: priceForEach)
+                pers.total_i_payed =  pers.total_i_payed - priceForEach
+            }
+           
+            
+            
+        }
+        CoreDataManager.save()
+    }
+    
     static func creationTransactionUpdates(payedBy_friend: Friend, t: Transaction, selectedFriends : FriendSet, priceForEach : Float ){
         //the transaction
         t.isPayedBy = payedBy_friend
