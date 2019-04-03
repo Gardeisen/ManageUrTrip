@@ -54,9 +54,9 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
            
         }
         else if segue.identifier == "cancel"{
-            if let traveltoCancel = self.newTravel{
-                TravelDAO.delete(travel: traveltoCancel)
-                
+            
+            for f in participants {
+                FriendDAO.delete(friend: f)
             }
             
         }
@@ -98,7 +98,7 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
             let friend = Friend(firstname: firstname, lastname: lastname)
             self.participants.append(friend)
             self.tableParticipantEmbedTravel.friendSetViewModel.add(friend: friend)
-            
+            self.tableParticipantEmbedTravel.tableView.reloadData()
             
         }
         let cancelAction = UIAlertAction(title: "CANCEL", style: .default)

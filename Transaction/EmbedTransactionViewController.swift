@@ -45,7 +45,6 @@ UIPickerViewDataSource{
         //connect the pickerView :
         self.payedBy.delegate = self
         self.payedBy.dataSource = self
-        //pickerData = ["it 1", "it2", "it3"]
         
         if let t = self.travelSelected {
             self.EmbedTransactionController.friendSetViewModel = FriendSetViewModel(travel : t)
