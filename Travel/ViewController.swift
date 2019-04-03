@@ -28,6 +28,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.viewDidLoad()
+        self.TravelTableViewController.tableView.reloadData()
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -78,8 +83,6 @@ class ViewController: UIViewController {
     // segue ViewControllerB -> ViewController
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
         if(sender.identifier == "save"){ //Unwind LINK
-       // let newTravelController = sender.source as! CreateTravel_ViewController
-        //let embedTravelController = newTravelController.childViewControllers[0] as! EmbedTravelViewController
         let embedTravelController = sender.source as! EmbedTravelViewController
         if let travel = embedTravelController.newTravel{
             self.TravelTableViewController.travelSet_ViewModel.add(trav: travel)

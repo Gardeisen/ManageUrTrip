@@ -23,4 +23,10 @@ class DetailsBalance_ViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.viewDidLoad()
+        self.tableDetailBalance_ViewController.tableView.reloadData()
+        
+    }
+    
 }

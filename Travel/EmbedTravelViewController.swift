@@ -25,7 +25,7 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
         if let travelToUpdate = self.newTravel {
             // only for the case of Update
 
-            self.title_field.placeholder = travelToUpdate.title
+            self.title_field.text = travelToUpdate.title
             self.startDate.date = travelToUpdate.beginning!
             //self.endDate.date = travelToUpdate.end!
             self.tableParticipantEmbedTravel.friendSetViewModel = FriendSetViewModel(travel: travelToUpdate)
@@ -40,7 +40,11 @@ class EmbedTravelViewController: UIViewController, UITextFieldDelegate {
             
         if segue.identifier == "save" { //UNWIND LINK
             let title : String  = self.title_field.text!
-            self.newTravel = Travel(t: title)
+            if(self.newTravel==nil){
+                self.newTravel = Travel(t: title)
+            }
+            
+            self.newTravel?.title = title
             for f in participants {
                 f.participates = self.newTravel
             }

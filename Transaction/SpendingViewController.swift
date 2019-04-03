@@ -26,6 +26,12 @@ class SpendingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.viewDidLoad()
+        self.TransactionTableViewController.tableView.reloadData()
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
         if (segue.identifier == "newSpent") {

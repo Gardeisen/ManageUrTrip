@@ -10,7 +10,10 @@ import Foundation
 
 extension Travel{
     
-    public var title : String { return self.pTitle ?? "" }
+    public var title : String {
+        get{ return (self.pTitle ?? "" )}
+        set{ self.pTitle = (newValue as String) }
+    }
     
     public var end : Date? {
         get{ return (self.pEnd as Date?) }

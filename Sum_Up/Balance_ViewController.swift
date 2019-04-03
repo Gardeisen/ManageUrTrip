@@ -22,7 +22,11 @@ class Balance_ViewController: UIViewController {
         }
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.viewDidLoad()
+        self.tableBalance_viewController.tableView.reloadData()
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "detailsOfBalance") {
